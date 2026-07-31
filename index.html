@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>违法广告典型案例曝光 | 2026年7月23-31日</title>
+<style>
+  :root{--p:#1a3a5c;--a:#c0392b;--bg:#f5f7fa;--c:#fff;--bd:#e1e8ed;--t:#2c3e50;--tl:#6b7c93;--sw:280px}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--t);line-height:1.7}
+
+  /* ===== Left Sidebar ===== */
+  .sidebar{position:fixed;top:0;left:0;width:var(--sw);height:100vh;background:var(--c);border-right:1px solid var(--bd);z-index:200;display:flex;flex-direction:column;overflow:hidden;transition:transform .3s ease}
+  .sidebar-scroll{flex:1;overflow-y:auto;padding:0 0 16px}
+  .sidebar-scroll::-webkit-scrollbar{width:4px}
+  .sidebar-scroll::-webkit-scrollbar-thumb{background:#d0d7de;border-radius:4px}
+  .sidebar-scroll::-webkit-scrollbar-thumb:hover{background:#b0b8c1}
+
+  /* Sidebar Header */
+  .s-hdr{background:linear-gradient(135deg,var(--p) 0%,#2c5f8a 100%);padding:20px 18px 16px;color:#fff;flex-shrink:0}
+  .s-hdr h1{font-size:15px;font-weight:700;letter-spacing:.5px;line-height:1.4}
+  .s-hdr .sub{font-size:11px;opacity:.8;margin-top:3px}
+  .s-hdr .tools{display:flex;gap:6px;margin-top:10px}
+  .s-hdr .tools button{padding:5px 10px;border-radius:6px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font-size:11px;font-weight:600;cursor:pointer;transition:all .2s}
+  .s-hdr .tools button:hover{background:rgba(255,255,255,.2)}
+  .s-hdr .tools button.active{background:rgba(255,255,255,.3);border-color:rgba(255,255,255,.6)}
+
+  /* Sidebar Data Banner */
+  .s-odb{margin:12px 14px 0;padding:18px 16px 14px;background:#f0f7ff;border-radius:10px;border:1px solid #d0e4f7}
+  .s-odb .odb-date{font-size:10px;color:var(--tl);font-weight:600;margin-bottom:14px;letter-spacing:.3px}
+  .s-odb .odb-num{display:flex;gap:12px;margin-bottom:16px}
+  .s-odb .num-item{flex:1;text-align:center;padding:12px 8px}
+  .s-odb .num-val{font-size:26px;font-weight:800;color:var(--p);line-height:1.1;letter-spacing:-.5px}
+  .s-odb .num-label{font-size:10px;color:var(--tl);margin-top:6px;font-weight:500}
+  .s-odb .odb-desc{font-size:11.5px;color:#4a5568;line-height:1.8;margin-bottom:14px;padding:10px 12px;background:rgba(255,255,255,.55);border-radius:6px;border-left:3px solid var(--p)}
+  .s-odb .odb-foot{display:flex;align-items:center;justify-content:space-between}
+  .s-odb .odb-update{font-size:9px;color:#27ae60;background:#eafaf1;padding:2px 8px;border-radius:8px;font-weight:600;display:inline-block;animation:pulse 2s infinite}
+  .s-odb .odb-source{font-size:9px;color:#95a5a6}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+
+  /* Sidebar Sections */
+  .s-sec{padding:10px 10px 0}
+  .s-sec-title{font-size:10px;font-weight:700;color:var(--tl);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;display:flex;align-items:center;gap:5px}
+  .s-sec-title span{font-size:13px}
+
+  /* Date Tabs - Horizontal Scrollable */
+  .s-tabs-wrap{display:flex;flex-direction:column;gap:6px;margin-bottom:4px}
+  .s-tabs-row{display:flex;align-items:center;gap:4px}
+  .s-tabs{display:flex;gap:3px;overflow-x:auto;flex:1;white-space:nowrap;scrollbar-width:thin;-ms-overflow-style:none;padding:2px 0}
+  .s-tabs::-webkit-scrollbar{height:3px}
+  .s-tabs::-webkit-scrollbar-thumb{background:#d0d7de;border-radius:3px}
+  .s-tab{flex-shrink:0;padding:3px 6px;border-radius:5px;border:1.5px solid var(--bd);background:#f8fafc;font-size:10px;font-weight:600;color:var(--tl);cursor:pointer;text-align:center;transition:all .2s;white-space:nowrap;line-height:1.3;display:inline-flex;align-items:center;gap:2px}
+  .s-tab:hover{background:#eef2f7;border-color:#b0bec5}
+  .s-tab.active{background:var(--p);color:#fff;border-color:var(--p);box-shadow:0 2px 8px rgba(26,58,92,.2)}
+  .s-tab .tab-badge{display:inline-block;font-size:7px;background:rgba(0,0,0,.08);padding:0px 3px;border-radius:4px;line-height:1.4}
+  .s-tab.active .tab-badge{background:rgba(255,255,255,.25)}
+  .s-today,  .s-today:hover,.s-archive:hover{border-color:var(--p);color:var(--p);background:#eef2f7}
+  .s-today.on{background:var(--p);color:#fff;border-color:var(--p)}
+  .arch-wrap{position:relative;flex-shrink:0}
+  .arch-btn{padding:3px 6px;border-radius:5px;border:1.5px solid var(--bd);font-size:10px;font-weight:600;color:var(--tl);cursor:pointer;background:#f8fafc;transition:all .2s;white-space:nowrap;display:inline-flex;align-items:center;gap:2px}
+  .arch-btn:hover{border-color:var(--p);color:var(--p);background:#eef2f7}
+  .arch-btn .arr{font-size:7px;margin-left:1px;transition:transform .2s}
+                                                /* Search in Sidebar */
+  .s-search{position:relative}
+  .s-search input{width:100%;padding:8px 30px 8px 30px;border:1.5px solid var(--bd);border-radius:8px;font-size:12px;color:var(--t);background:#f8fafc;outline:none;transition:all .2s}
+  .s-search input:focus{border-color:var(--p);background:#fff;box-shadow:0 0 0 3px rgba(26,58,92,.08)}
+  .s-search input::placeholder{color:#aab5c4;font-size:11px}
+  .s-search .s-icon{position:absolute;left:9px;top:50%;transform:translateY(-50%);font-size:13px;color:#aab5c4;pointer-events:none}
+  .s-search .s-clear{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:none;border:none;font-size:13px;color:#aab5c4;cursor:pointer;display:none;padding:3px}
+  .s-search .s-clear.show{display:block}
+  .s-search .s-clear:hover{color:var(--a)}
+
+
+  /* Chips in Sidebar - vertical wrap */
+  .s-chips{display:flex;gap:5px;flex-wrap:wrap}
+  .chip{padding:4px 10px;border-radius:14px;border:1.5px solid var(--bd);font-size:10px;font-weight:500;color:var(--tl);cursor:pointer;background:#f8fafc;transition:all .2s;user-select:none;line-height:1.4}
+  .chip:hover{border-color:var(--p);color:var(--p);background:#eef2f7}
+  .chip.active{background:var(--p);color:#fff;border-color:var(--p)}
+  .chip.vio.active{background:var(--a);border-color:var(--a)}
+  .chip.cf.active{background:#27ae60;border-color:#27ae60}
+  .chip.cd.active{background:#8e44ad;border-color:#8e44ad}
+  .chip.cm.active{background:#2980b9;border-color:#2980b9}
+  .chip.chp.active{background:#16a085;border-color:#16a085}
+  .chip.cr.active{background:#e67e22;border-color:#e67e22}
+  .chip.ce.active{background:#d35400;border-color:#d35400}
+  .chip.cs.active{background:#2c3e50;border-color:#2c3e50}
+  .chip.co.active{background:#7f8c8d;border-color:#7f8c8d}
+
+  /* Result count */
+  .s-count{text-align:center;padding:8px 14px;font-size:12px;color:var(--tl);border-top:1px solid var(--bd);margin-top:4px;flex-shrink:0;background:#fafbfc}
+  .s-count strong{color:var(--p);font-size:16px}
+
+  /* Reset button */
+  .s-reset{display:block;width:calc(100% - 28px);margin:8px 14px 0;padding:6px 0;border-radius:6px;border:1.5px solid var(--bd);font-size:11px;font-weight:600;color:var(--tl);cursor:pointer;background:#fff;transition:all .2s;text-align:center}
+  .s-reset:hover{border-color:var(--a);color:var(--a);background:#fef5f5}
+
+  /* Sidebar Divider */
+  .s-div{height:1px;background:var(--bd);margin:10px 14px}
+
+  /* ===== Mobile Toggle ===== */
+  .mob-toggle{display:none;position:fixed;top:12px;left:12px;z-index:300;width:40px;height:40px;border-radius:10px;background:var(--c);border:1.5px solid var(--bd);box-shadow:0 2px 12px rgba(0,0,0,.1);cursor:pointer;align-items:center;justify-content:center;font-size:18px;color:var(--p)}
+  .mob-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3);z-index:199}
+
+  /* ===== Main Content ===== */
+  .main{margin-left:var(--sw);min-height:100vh}
+  .main-hdr{background:linear-gradient(135deg,var(--p) 0%,#2c5f8a 100%);color:#fff;padding:24px 0 18px;text-align:center}
+  .main-hdr h2{font-size:20px;font-weight:700;letter-spacing:.5px}
+  .main-hdr .sub{font-size:13px;opacity:.8;margin-top:2px}
+  .ctn{max-width:960px;margin:0 auto;padding:0 24px}
+
+  .tc{display:none}.tc.active{display:block}
+
+  /* Cards */
+  .sc{background:var(--c);border-radius:12px;padding:18px 22px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,.04);border-left:4px solid var(--p)}
+  .sc h2{font-size:15px;color:var(--p);margin-bottom:6px}
+  .sc p{font-size:13px;color:var(--tl);margin-bottom:4px}
+  .cc{background:var(--c);border-radius:12px;margin-bottom:12px;box-shadow:0 2px 12px rgba(0,0,0,.04);overflow:hidden;transition:all .3s}
+  .cc:hover{box-shadow:0 4px 24px rgba(0,0,0,.08)}
+  .cc.hidden{display:none}
+  .ch{padding:12px 18px;display:flex;align-items:flex-start;gap:10px;border-bottom:1px solid var(--bd)}
+  .cn{min-width:28px;height:28px;background:var(--p);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:10px;flex-shrink:0}
+  .cta{flex:1}
+  .ct{font-size:13px;font-weight:700;color:var(--t);margin-bottom:3px}
+  .ct mark{background:#fff3cd;padding:1px 3px;border-radius:3px}
+  .ctags{display:flex;gap:4px;flex-wrap:wrap}
+  .tag{display:inline-block;padding:2px 7px;border-radius:9px;font-size:9px;font-weight:500;color:#fff}
+  .tag-food{background:#27ae60}.tag-drug{background:#8e44ad}.tag-med{background:#2980b9}.tag-re{background:#e67e22}
+  .tag-oth{background:#7f8c8d}.tag-hp{background:#16a085}.tag-edu{background:#d35400}.tag-cr{background:#c0392b}
+  .cb{padding:12px 18px}
+  .ig{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+  .ii{background:#f8fafc;border-radius:7px;padding:8px 10px}
+  .il{font-size:9px;color:var(--tl);font-weight:600;letter-spacing:.5px;margin-bottom:1px}
+  .iv{font-size:11px;color:var(--t);font-weight:500}
+  .iv mark,.ft mark,.pt mark{background:#fff3cd;padding:0 2px;border-radius:2px}
+  .st{font-size:10px;font-weight:700;color:var(--p);margin:8px 0 4px;padding-left:7px;border-left:3px solid var(--p)}
+  .ft{font-size:11px;color:var(--t);line-height:1.8;padding:7px 10px;background:#f8fafc;border-radius:7px;margin-bottom:5px}
+  .pt{font-size:11px;color:var(--a);font-weight:600;padding:7px 10px;background:#fef5f5;border-radius:7px;border-left:3px solid var(--a)}
+  .srct{display:inline-block;font-size:10px;color:var(--tl);background:#f0f3f6;padding:2px 7px;border-radius:4px;margin-top:3px}
+
+  /* Orig text */
+  .ot{margin-top:6px}
+  .ob{background:none;border:1px dashed var(--bd);border-radius:5px;padding:4px 10px;font-size:10px;color:var(--tl);cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:4px}
+  .ob:hover{border-color:var(--p);color:var(--p)}
+  .ob.open{border-color:var(--p);color:var(--p);background:rgba(26,58,92,.03)}
+  .oc{display:none;margin-top:6px;padding:10px 12px;background:#fafbfc;border:1px solid var(--bd);border-radius:7px;font-size:10px;line-height:1.8;color:#4a5568}
+  .oc.show{display:block}
+  .oc .ol{font-size:9px;font-weight:700;color:var(--p);margin-bottom:3px;display:flex;align-items:center;gap:4px}
+  .oc .ol a{color:var(--p);text-decoration:none}
+  .oc .ol a:hover{text-decoration:underline}
+
+  .npn{background:#eaf6ff;border:1px solid #b3d9ff;color:#1a5276;padding:8px 14px;border-radius:7px;font-size:11px;margin:12px 0;display:flex;align-items:flex-start;gap:6px}
+  .npn::before{content:'ℹ️';font-size:13px;flex-shrink:0}
+  .nr{text-align:center;padding:40px 20px;color:var(--tl);display:none}
+  .nr.show{display:block}
+  .nr .ni{font-size:36px;margin-bottom:8px}
+
+  /* Analysis */
+  .ac{background:var(--c);border-radius:12px;padding:18px 22px;margin-bottom:12px;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+  .ac h3{font-size:13px;color:var(--p);margin-bottom:8px;padding-bottom:5px;border-bottom:2px solid var(--bd)}
+  .al{list-style:none}
+  .al li{padding:5px 0;border-bottom:1px solid #f0f0f0;font-size:11px;display:flex;align-items:flex-start;gap:5px}
+  .al li::before{content:'▸';color:var(--p);font-weight:700;flex-shrink:0}
+  .cb2{display:flex;align-items:center;gap:8px;margin:4px 0}
+  .cl{min-width:80px;font-size:10px;text-align:right;color:var(--tl)}
+  .ck{flex:1;height:18px;background:#eee;border-radius:9px;overflow:hidden}
+  .cf2{height:100%;border-radius:9px;display:flex;align-items:center;padding-left:7px;font-size:9px;color:#fff;font-weight:600}
+
+  /* Quick read mode */
+  body.quick .ft,body.quick .st,body.quick .ot,body.quick .sc,body.quick .npn,body.quick .ac{display:none!important}
+  body.quick .cb{padding:8px 18px}
+  body.quick .pt{margin-bottom:3px}
+  body.quick .srct{display:none}
+
+  /* Print */
+  @media print{
+    .sidebar,.mob-toggle,.mob-overlay,.ot{display:none!important}
+    .main{margin-left:0!important}
+    .tc{display:block!important}
+    .cc{break-inside:avoid;box-shadow:none;border:1px solid #eee}
+    body{background:#fff}
+  }
+
+  /* Footer */
+  .ftr{text-align:center;padding:24px 0 32px;color:var(--tl);font-size:11px}
+  .ftr a{color:var(--p);text-decoration:none}
+  .ftr .brand{margin-top:10px;font-size:15px;font-weight:700;color:var(--p);letter-spacing:2px}
+  .ftr .brand-sub{font-size:10px;color:var(--tl);margin-top:2px}
+
+  /* ===== Responsive ===== */
+  @media(max-width:900px){
+    .ig{grid-template-columns:1fr}
+  }
+  @media(max-width:768px){
+    .sidebar{transform:translateX(-100%)}
+    .sidebar.open{transform:translateX(0);box-shadow:4px 0 24px rgba(0,0,0,.15)}
+    .mob-toggle{display:flex}
+    .mob-overlay.show{display:block}
+    .main{margin-left:0}
+    .main-hdr{padding-top:56px}
+    .ctn{padding:0 16px}
+  }
+  /* global search mode styles */
+  .global-search-banner{display:none;background:linear-gradient(135deg,#e8f4fd,#d6eaf8);border:1px solid #a9cce3;border-radius:8px;padding:10px 16px;margin:0 16px 12px;font-size:13px;color:#1a5276;align-items:center;gap:8px}
+  .global-search-banner.show{display:flex}
+  .global-search-banner .gsb-icon{font-size:16px}
+  .global-search-banner .gsb-text{flex:1}
+  .global-search-banner .gsb-close{cursor:pointer;font-size:16px;color:#5dade2;padding:2px 6px;border-radius:4px}
+  .global-search-banner .gsb-close:hover{background:rgba(93,173,226,.15)}
+  .date-badge{display:inline-block;background:#eaf2f8;color:#2471a3;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:8px;font-weight:500;vertical-align:middle}
+  .global-search-hint{display:none;text-align:center;padding:12px 16px;color:#5dade2;font-size:13px}
+  .global-search-hint.show{display:block}
+
+  .arch-select{display:none;position:absolute;top:calc(100% + 4px);right:0;background:#fff;border:1px solid var(--bd);border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.1);z-index:400;min-width:200px;padding:6px 8px;font-size:12px;color:var(--t);outline:none;cursor:pointer;-webkit-appearance:auto}
+  .arch-select:focus{border-color:var(--p)}
+  .arch-select option{padding:4px 8px;font-size:12px}
+</style>
+</head>
+<body>
+
+<!-- Mobile Toggle -->
+<button class="mob-toggle" id="mobToggle" onclick="toggleSidebar()">☰</button>
+<div class="mob-overlay" id="mobOverlay" onclick="toggleSidebar()"></div>
+
+<!-- ===== Left Sidebar ===== -->
+<div class="sidebar" id="sidebar">
+  <div class="s-hdr">
+    <h1>⚠️ 违法广告典型案例曝光</h1>
+    <div class="sub">市场监管总局 · 更新至 2026.7.31</div>
+    <div class="tools">
+      <button id="readFull" class="active" onclick="setReadMode('full')">📖 完整</button>
+      <button id="readQuick" onclick="setReadMode('quick')">⚡ 快速</button>
+      <button onclick="exportDay()">📥 导出PDF</button>
+    </div>
+  </div>
+
+  <div class="sidebar-scroll">
+    <!-- Data Banner -->
+    <div class="s-odb">
+      <div class="odb-date" id="statDate">📊 本日统计</div>
+      <div class="odb-num">
+        <div class="num-item"><div class="num-val">20,302</div><div class="num-label">查办案件(件)</div></div>
+        <div class="num-item"><div class="num-val">1.05亿</div><div class="num-label">罚没金额</div></div>
+      </div>
+      <div class="odb-desc">2026年上半年，全国市场监管部门查办广告违法案件20,302件，罚没金额共计1.05亿元。</div>
+      <div class="odb-foot"><div class="odb-update">✅ 持续更新中</div><div class="odb-source">数据来源：监管公开</div></div>
+    </div>
+
+    <!-- Search -->
+    <div class="s-sec">
+      <div class="s-sec-title"><span>🔎</span> 全局搜索</div>
+      <div class="s-search">
+        <span class="s-icon">⌕</span>
+        <input type="text" id="si" placeholder="跨日期检索：标题/企业/产品/情形..."/>
+        <button class="s-clear" id="cb" onclick="clearS()">✕</button>
+      </div>
+    </div>
+
+    <!-- Date Tabs -->
+    <div class="s-sec">
+      <div class="s-sec-title"><span>📅</span> 日期</div>
+      <div class="s-tabs-wrap">
+        <div class="s-tabs-row">
+          <button class="s-today on" id="todayBtn" onclick="goToday()">今日</button>
+          <div class="s-tabs" id="dateTabs">
+            <div class="s-tab active" data-tab="d9" data-label="26年7月31日" onclick="sT('d9',this)">26年7月31日<span class="tab-badge">7</span></div>
+            <div class="s-tab" data-tab="d8" data-label="26年7月30日" onclick="sT('d8',this)">26年7月30日<span class="tab-badge">11</span></div>
+            <div class="s-tab" data-tab="d7" data-label="26年7月29日" onclick="sT('d7',this)">26年7月29日<span class="tab-badge">4</span></div>
+            <div class="s-tab" data-tab="d6" data-label="26年7月28日" onclick="sT('d6',this)">26年7月28日<span class="tab-badge">5</span></div>
+            <div class="s-tab" data-tab="d5" data-label="26年7月27日" onclick="sT('d5',this)">26年7月27日<span class="tab-badge">2</span></div>
+            <div class="s-tab" data-tab="d4" data-label="26年7月26日" onclick="sT('d4',this)">26年7月26日<span class="tab-badge">0</span></div>
+            <div class="s-tab" data-tab="d3" data-label="26年7月25日" onclick="sT('d3',this)">26年7月25日<span class="tab-badge">3</span></div>
+            <div class="s-tab" data-tab="d2" data-label="26年7月24日" onclick="sT('d2',this)">26年7月24日<span class="tab-badge">2</span></div>
+            <div class="s-tab" data-tab="d1" data-label="26年7月23日" onclick="sT('d1',this)">26年7月23日<span class="tab-badge">19</span></div>
+          </div>
+        </div>
+        <div class="s-tabs-row">
+          <div class="arch-wrap" id="archWrap" style="display:none">
+            <button class="arch-btn" id="archBtn" onclick="toggleArch()">🗂 历史日期 <span class="arr">▾</span></button>
+            <select class="arch-select" id="archSelect" onchange="pickArch(this.value);this.style.display='none';document.getElementById('archBtn').classList.remove('open')">
+              <option value="">选择日期…</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Category Chips -->
+    <div class="s-sec">
+      <div class="s-sec-title"><span>📂</span> 品类</div>
+      <div class="s-chips" id="cG">
+        <span class="chip active" data-c="all" onclick="tC(this)">全部</span>
+      </div>
+    </div>
+
+    <div class="s-div"></div>
+
+    <!-- Violation Chips -->
+    <div class="s-sec">
+      <div class="s-sec-title"><span>⚖️</span> 违法情形</div>
+      <div class="s-chips" id="vG">
+        <span class="chip vio active" data-v="all" onclick="tV(this)">全部</span>
+      </div>
+    </div>
+
+    <button class="s-reset" onclick="resetF()">重置筛选</button>
+  </div>
+
+  <!-- Result Count (fixed at bottom) -->
+  <div class="s-count" id="fres2">共 <strong>19</strong> 条</div>
+</div>
+
+<!-- ===== Main Content ===== -->
+<div class="main">
+  <div class="main-hdr">
+    <h2>⚠️ 违法广告典型案例曝光</h2>
+
+  </div>
+
+  <div class="ctn" style="padding-top:20px;padding-bottom:20px">
+
+  <!-- 全局搜索提示 -->
+  <div id="gsBanner" class="global-search-banner">
+    <span class="gsb-icon">🔍</span>
+    <span class="gsb-text" id="gsText">跨日期全局搜索中…</span>
+    <span class="gsb-close" onclick="clearS()" title="清除搜索">✕</span>
+  </div>
+
+  <!-- ===== 7月23日 ===== -->
+  <div class="tc" id="d1">
+    <div class="sc"><h2>📋 7月23日概览</h2><p><strong>市场监管总局</strong>于7月21日发布<strong>十起民生领域违法广告典型案例</strong>，7月23日央视、中国质量报等集中报道。</p><p><strong>广西市场监管局</strong>同日发布<strong>2026年第一批违法广告典型案例（9起）</strong>。</p><p class="srct">来源：<a href="https://www.samr.gov.cn/xw/zj/art/2026/art_fa68b35c13f449218736a97ff7f27133.html" target="_blank">市场监管总局官网</a></p></div>
+    <div id="nr1" class="nr"><div class="ni">🔍</div><div>未找到匹配的案例，请调整筛选条件</div></div>
+
+    <!-- 1 --><div class="cc" data-c="食品" data-d="2026-01" data-v="宣称治疗功效,直播违法" data-k="徐州多赢记文化传媒 movefree 氨糖软骨素 purmeo 帕米奥 益生菌 直播 改善骨关节 杀灭幽门螺旋杆菌 王某某">
+      <div class="ch"><div class="cn">1</div><div class="cta"><div class="ct">徐州多赢记文化传媒有限公司违法广告案</div><div class="ctags"><span class="tag tag-food">普通食品</span><span class="tag tag-cr">直播违法</span><span class="tag" style="background:#e74c3c">罚没最高</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">普通食品宣称保健功能及疾病治疗功效</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">江苏省徐州市邳州市市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人选用王某某以直播方式推销Move Free氨糖软骨素、Purmeo帕米奥养胃益生菌胶囊等普通食品时，在发布的广告中宣称具有"改善骨关节"等保健功能以及"杀灭幽门螺旋杆菌"等疾病治疗功效。</div>
+      <div class="st">行政处罚</div><div class="pt">对当事人罚没款62.91万元；对代言人王某某罚没款10.99万元。合计罚没73.9万元（2026年1月）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 市场监管总局原文 <a href="https://www.samr.gov.cn/xw/zj/art/2026/art_fa68b35c13f449218736a97ff7f27133.html" target="_blank">↗ 原文链接</a></div><p>经查，徐州多赢记文化传媒有限公司选用王某某以直播方式推销movefree氨糖软骨素、Purmeo帕米奥养胃益生菌胶囊等普通食品时，在发布的广告中宣称具有"改善骨关节"等保健功能以及"杀灭幽门螺旋杆菌"等疾病功效。</p><p>2026年1月，邳州市市场监管局依据《中华人民共和国广告法》有关规定，对当事人作出罚没款62.91万元的行政处罚；对广告代言人王某某作出罚没款10.99万元的行政处罚。</p></div></div></div></div>
+
+    <!-- 2 --><div class="cc" data-c="食品,医疗器械" data-d="2026-02" data-v="虚假广告,宣称治疗功效" data-k="义乌厚物电子商务 纯钛保温杯 smek 肩颈贴 腰椎间盘突出 腰肌劳损">
+      <div class="ch"><div class="cn">2</div><div class="cta"><div class="ct">义乌厚物电子商务有限公司违法广告案</div><div class="ctags"><span class="tag tag-food">普通食品</span><span class="tag tag-med">医疗器械</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">虚假广告内容 + 普通商品宣称疾病治疗功效</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">浙江省义乌市市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人通过互联网发布的"纯钛保温杯"普通商品广告中含有"过15天茶水可以保持新鲜美味"等虚假内容；在发布的"SMEK肩颈贴"普通商品广告中宣称具有治疗"腰椎间盘突出""腰疼""腰肌劳损"等疾病功效。</div>
+      <div class="st">行政处罚</div><div class="pt">罚没款52.96万元（2026年2月）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 市场监管总局原文 <a href="https://www.samr.gov.cn/xw/zj/art/2026/art_fa68b35c13f449218736a97ff7f27133.html" target="_blank">↗ 原文链接</a></div><p>经查，义乌厚物电子商务有限公司通过互联网发布的"纯钛保温杯"普通商品广告中含有"过15天茶水可以保持新鲜美味"等虚假内容；在发布的"SMEK肩颈贴"普通商品广告中宣称具有治疗"腰椎间盘突出""腰疼""腰肌劳损"等疾病功效。</p><p>2026年2月，义乌市市场监管局依据《中华人民共和国广告法》有关规定，对当事人作出罚没款52.96万元的行政处罚。</p></div></div></div></div>
+
+    <!-- 3 --><div class="cc" data-c="药品,食品" data-d="2026-03" data-v="未经审查,虚假广告" data-k="杭州掘木科技 奥利司他胶囊 正官庄 小红瓶 血糖体脂 口服液 医学生 化验室 胰岛素">
+      <div class="ch"><div class="cn">3</div><div class="cta"><div class="ct">杭州掘木科技有限公司违法广告案</div><div class="ctags"><span class="tag tag-drug">药品</span><span class="tag tag-food">普通食品</span><span class="tag tag-cr">未经审查</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">未经审查发布药品广告 + 虚构虚假内容 + 使用医疗用语</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">上海市杨浦区市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在互联网上发布未经广告审查的"奥利司他胶囊"药品广告，且含有"虚构医学生身份、化验室场景、服用效果"等虚假内容；发布的"韩国正官庄小红瓶血糖体脂管理口服液"普通食品广告含有"虚构身体实验数据、体检报告、对比效果"等虚假内容，且使用"调节胰岛素抵抗"等医疗用语。</div>
+      <div class="st">行政处罚</div><div class="pt">罚没款38.37万元（2026年3月）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 市场监管总局原文 <a href="https://www.samr.gov.cn/xw/zj/art/2026/art_fa68b35c13f449218736a97ff7f27133.html" target="_blank">↗ 原文链接</a></div><p>经查，杭州掘木科技有限公司在互联网上发布未经广告审查的"奥利司他胶囊"药品广告，且广告中含有"虚构医学生身份、化验室场景、服用效果"等虚假内容；发布的"韩国正官庄小红瓶血糖体脂管理口服液"普通食品广告含有"虚构身体实验数据、体检报告、对比效果"等虚假内容，且使用"调节胰岛素抵抗"等医疗用语。</p><p>2026年3月，杨浦区市场监管局依据《中华人民共和国广告法》有关规定，对当事人作出罚没款38.37万元的行政处罚。</p></div></div></div></div>
+
+    <!-- 4 --><div class="cc" data-c="医疗器械,保健食品,食品" data-d="2026-03" data-v="未经审查,宣称治疗功效,虚假引证" data-k="山东众欣百姓医药 牙科分离剂 阿莫灰甲擦剂 同仁堂 丹参菊花茶 高血压 b族维生素 治愈率">
+      <div class="ch"><div class="cn">4</div><div class="cta"><div class="ct">山东众欣百姓医药有限公司违法广告案</div><div class="ctags"><span class="tag tag-med">医疗器械</span><span class="tag tag-hp">保健食品</span><span class="tag tag-food">普通食品</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">未经审查发布医疗器械/保健食品广告 + 说明治愈率 + 虚假引证</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">山东省临沂市市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在互联网上发布未经审查的"牙科分离剂""阿莫灰甲擦剂"等医疗器械广告，含有"3天修复牙龈、7天改善牙松动""1滴速去灰指甲"等说明治愈率的内容；发布未经审查的"同仁堂牌丹参菊花茶"等保健食品广告，含有"轻松改善高血压"等内容；"B族维生素片"普通食品广告含有"荣获好评榜第1名"等虚假内容。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款30万元（2026年3月）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 市场监管总局原文 <a href="https://www.samr.gov.cn/xw/zj/art/2026/art_fa68b35c13f449218736a97ff7f27133.html" target="_blank">↗ 原文链接</a></div><p>经查，山东众欣百姓医药有限公司在互联网上通过商品销售详情页发布未经广告审查的"牙科分离剂""阿莫灰甲擦剂"等医疗器械广告，且广告中含有"3天修复牙龈、7天改善牙松动""1滴速去灰指甲"等说明治愈率或有效率的内容；发布未经广告审查的"同仁堂牌丹参菊花茶"等保健食品广告，且广告中含有"轻松改善高血压"等涉及疾病预防、治疗功效的内容；发布的"B族维生素片"普通食品广告中含有"荣获好评榜第1名"等虚假内容。</p><p>2026年3月，临沂市市场监管局依据《中华人民共和国广告法》有关规定，对当事人作出罚款30万元的行政处罚。</p></div></div></div></div>
+
+    <!-- 5 --><div class="cc" data-c="房地产" data-d="2026-01" data-v="虚假促销" data-k="深圳安达房地产 预售许可证 长租公寓 沙盘 购房者">
+      <div class="ch"><div class="cn">5</div><div class="cta"><div class="ct">深圳市安达房地产开发有限公司违法广告案</div><div class="ctags"><span class="tag tag-re">房地产</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">未取得预售许可证发布房地产广告 + 宣传内容与实际不一致</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">广东省深圳市市场监管局光明监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人未取得预售许可证发布房地产广告，且广告宣传图册中长租公寓和文化活动室的标示位置与实际建设交付位置不一致，沙盘展示的商业裙楼部分宣传内容与实际建设交付不一致，对购房者造成误导。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款27.55万元（2026年1月）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 市场监管总局原文 <a href="https://www.samr.gov.cn/xw/zj/art/2026/art_fa68b35c13f449218736a97ff7f27133.html" target="_blank">↗ 原文链接</a></div><p>经查，深圳市安达房地产开发有限公司未取得预售许可证发布房地产广告，且广告宣传图册中长租公寓和文化活动室的标示位置与实际建设交付位置不一致，沙盘展示的商业裙楼部分宣传内容与实际建设交付不一致，对购房者造成误导。</p><p>2026年1月，深圳市市场监管局光明监管局依据《中华人民共和国广告法》有关规定，对当事人作出罚款27.55万元的行政处罚。</p></div></div></div></div>
+
+    <!-- 6 --><div class="cc" data-c="食品" data-d="2026-02" data-v="虚假引证" data-k="温州盈科食品 休闲鸭舌 全国销量第一 引证 直播">
+      <div class="ch"><div class="cn">6</div><div class="cta"><div class="ct">温州盈科食品有限公司违法广告案</div><div class="ctags"><span class="tag tag-food">普通食品</span><span class="tag tag-oth">虚假引证</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">引证内容缺乏充分依据（"全国销量第一"）</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">浙江省温州市市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人以门店海报、直播等形式发布含有"2024年休闲鸭舌全国销量第一"等引证内容的广告，且上述"全国销量第一"等市场调研结论缺乏充分依据。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款20万元（2026年2月）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 市场监管总局原文 <a href="https://www.samr.gov.cn/xw/zj/art/2026/art_fa68b35c13f449218736a97ff7f27133.html" target="_blank">↗ 原文链接</a></div><p>经查，温州盈科食品有限公司以门店海报、直播等形式发布含有"2024年休闲鸭舌全国销量第一"等引证内容的广告，且上述"全国销量第一"等市场调研结论缺乏充分依据。</p><p>2026年2月，温州市市场监管局依据《中华人民共和国广告法》有关规定，对当事人作出罚款20万元的行政处罚。</p></div></div></div></div>
+
+    <!-- 7 --><div class="cc" data-c="保健食品" data-d="2025-09" data-v="未经审查,宣称治疗功效" data-k="荟生 海南 健康产业 金芦荟口服液 保健食品 微信公众号 慢阻肺 头痛">
+      <div class="ch"><div class="cn">7</div><div class="cta"><div class="ct">荟生（海南）健康产业有限公司违法广告案</div><div class="ctags"><span class="tag tag-hp">保健食品</span><span class="tag tag-cr">未经审查</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">未经审查发布保健食品广告 + 宣称疾病治疗功能</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">海南省海口市市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在微信公众号上发布未经审查的"金芦荟口服液"保健食品广告，含有"金芦荟改善了我的慢阻肺病、治愈了我多种慢性疾病"等涉及疾病预防、治疗功能的内容。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款15万元（2025年9月）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 市场监管总局原文 <a href="https://www.samr.gov.cn/xw/zj/art/2026/art_fa68b35c13f449218736a97ff7f27133.html" target="_blank">↗ 原文链接</a></div><p>经查，荟生（海南）健康产业有限公司在微信公众号上发布未经审查的"金芦荟口服液"保健食品广告，且广告中含有"金芦荟口服液让我重回健康……连着喝了三个月的金芦荟口服液后，以前犯一次头疼病，半个月都缓不过来，现在头昏、头痛现象已基本痊愈""金芦荟改善了我的慢阻肺病、治愈了我多种慢性疾病"等涉及疾病预防、治疗功能的内容。</p><p>2025年9月，海口市市场监管局依据《中华人民共和国广告法》有关规定，对当事人作出罚款15万元的行政处罚。</p></div></div></div></div>
+
+    <!-- 8 --><div class="cc" data-c="药品" data-d="2026-05" data-v="处方药违规" data-k="西安正大制药 平消胶囊 处方药 微信服务号 药品功效对比">
+      <div class="ch"><div class="cn">8</div><div class="cta"><div class="ct">西安正大制药有限公司违法广告案</div><div class="ctags"><span class="tag tag-drug">处方药</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">处方药在大众媒体发布广告 + 药品功效对比 + 数据无出处</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">陕西省西安市雁塔区市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在微信服务号上发布"平消胶囊"处方药药品广告，违反"处方药只能在指定的医学、药学专业刊物上作广告"有关规定，还存在将"平消胶囊"与其他药品的功效和安全性进行对比、使用数据未表明出处等行为。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款12.9万元（2026年5月）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 市场监管总局原文 <a href="https://www.samr.gov.cn/xw/zj/art/2026/art_fa68b35c13f449218736a97ff7f27133.html" target="_blank">↗ 原文链接</a></div><p>经查，西安正大制药有限公司在微信服务号上发布"平消胶囊"处方药药品广告，违反"处方药只能在国务院卫生行政部门和国务院药品监督管理部门共同指定的医学、药学专业刊物上作广告"有关规定。当事人还存在将"平消胶囊"与其他药品的功效和安全性进行对比、使用数据未表明出处等违法广告行为。</p><p>2026年5月，西安市雁塔区市场监管局依据《中华人民共和国广告法》有关规定，对当事人作出罚款12.9万元的行政处罚。</p></div></div></div></div>
+
+    <!-- 9 --><div class="cc" data-c="医疗器械" data-d="2026-01" data-v="骗取审查" data-k="安徽正虎堂药业 砭贴 医用退热凝胶 穴位压力刺激贴 医用冰垫 虚假材料 骗取审查 839件 三年不受理">
+      <div class="ch"><div class="cn">9</div><div class="cta"><div class="ct">安徽正虎堂药业有限公司违法广告案</div><div class="ctags"><span class="tag tag-med">医疗器械</span><span class="tag tag-cr">骗取审查批准</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">提交虚假材料骗取医疗器械广告审查批准</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">安徽省阜阳市市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在申请"砭贴""医用退热凝胶""穴位压力刺激贴""医用冰垫"等医疗器械产品广告审查过程中，擅自篡改、编造《产品生产备案说明书》内容，属于提交虚假材料骗取医疗器械广告审查批准。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款13.8万元。撤销839件第一类医疗器械广告批准文号，三年内不受理广告审查申请（2026年1月）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 市场监管总局原文 <a href="https://www.samr.gov.cn/xw/zj/art/2026/art_fa68b35c13f449218736a97ff7f27133.html" target="_blank">↗ 原文链接</a></div><p>经查，安徽正虎堂药业有限公司在申请部分"砭贴""医用退热凝胶""穴位压力刺激贴""医用冰垫"等医疗器械产品广告审查过程中，擅自篡改、编造《产品生产备案说明书》内容，向广告审查机关提供的《产品使用说明书》与生产备案的《产品使用说明书》在"适用范围""使用方法"等方面不一致，属于提交虚假材料骗取医疗器械广告审查批准。</p><p>2026年1月，阜阳市市场监管局依据《中华人民共和国广告法》有关规定，对当事人作出罚款13.8万元的行政处罚。安徽省市场监管局依法撤销当事人申报的839件第一类医疗器械广告批准文号，并三年内不受理当事人的广告审查申请。</p></div></div></div></div>
+
+    <!-- 10 --><div class="cc" data-c="其他" data-d="2026-04" data-v="涉嫌犯罪,虚假广告,直播违法" data-k="熊某某 直播 仿古瓷 古董瓷 虚假广告罪 移送公安 景德镇 新加坡 马来西亚">
+      <div class="ch"><div class="cn">10</div><div class="cta"><div class="ct">熊某某违法广告案（移送公安）</div><div class="ctags"><span class="tag tag-cr">涉嫌犯罪</span><span class="tag tag-oth">直播违法</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">虚假广告欺骗误导消费者（现代仿古瓷→古董瓷）</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">江西省景德镇市市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">自然人熊某某搭建直播间进行直播推销，将现代仿古瓷宣传成古董瓷销往新加坡、马来西亚等地。</div>
+      <div class="st">行政处罚</div><div class="pt">涉嫌构成虚假广告罪，移送公安机关立案侦查（2026年4月）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 市场监管总局原文 <a href="https://www.samr.gov.cn/xw/zj/art/2026/art_fa68b35c13f449218736a97ff7f27133.html" target="_blank">↗ 原文链接</a></div><p>经查，自然人熊某某在景德镇昌江区某村镇场地搭建直播间进行直播推销，并在主页中精心制作多条广告，以虚假或者引人误解的内容欺骗误导消费者，将现代仿古瓷宣传成古董瓷销往新加坡、马来西亚等地。</p><p>2026年4月，因涉案金额较大，涉嫌构成虚假广告罪，景德镇市市场监管局依据《中华人民共和国广告法》有关规定，将该案移送公安机关立案侦查。</p></div></div></div></div>
+
+    <div class="npn"><div><strong>广告平台处罚情况：</strong>本批十起案例中，处罚对象均为<strong>广告主、广告代言人</strong>，未发现广告平台被直接处罚。涉及渠道包括直播间、微信公众号、微信服务号、互联网电商详情页等。</div></div>
+
+    <div class="sc" style="margin-top:16px;border-left-color:#e67e22"><h2>📋 广西市场监管局 · 7月23日发布（9起）</h2><p>同日，广西市场监管局发布2026年第一批违法广告典型案例。</p><p class="srct">来源：<a href="http://m.toutiao.com/group/7665634771980091910/" target="_blank">广西市场监管局</a></p></div>
+
+    <!-- G1 --><div class="cc" data-c="其他" data-d="2026-01" data-v="虚假广告,直播违法" data-k="昌意电动自行车 非法改装 直播 南宁"><div class="ch"><div class="cn" style="background:#e67e22">G1</div><div class="cta"><div class="ct">南宁高新区昌意电动自行车销售部违法广告案</div><div class="ctags"><span class="tag tag-oth">非法改装</span><span class="tag tag-cr">直播违法</span></div></div></div><div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">直播中宣传非法改装电动自行车话术</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">南宁市高新区市场监管局</div></div></div><div class="st">违法事实</div><div class="ft">当事人在直播销售电动自行车中使用"12寸搭载的是2000瓦的一个动力，10寸搭载的是1500的一个动力"等非法改装话术，构成虚假广告。</div><div class="st">行政处罚</div><div class="pt">依法作出行政处罚</div><div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 广西市场监管局原文 <a href="http://m.toutiao.com/group/7665634771980091910/" target="_blank">↗ 原文链接</a></div><p>南宁市高新区市场监管局查明，南宁市昌意电动自行车销售部在直播销售电动自行车中使用非法改装电动自行车的话术。违反了《广告法》第四条和第二十八条之规定。</p></div></div></div></div>
+
+    <!-- G2 --><div class="cc" data-c="医疗服务" data-d="2026-01" data-v="未经审查,医疗广告违规" data-k="牙乙乐口腔门诊 医疗广告 审查证明 种植 矫正 鹿寨"><div class="ch"><div class="cn" style="background:#e67e22">G2</div><div class="cta"><div class="ct">鹿寨牙乙乐口腔门诊有限公司违法广告案</div><div class="ctags"><span class="tag tag-med">医疗广告</span><span class="tag tag-cr">未经审查</span></div></div></div><div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">未经审查发布含对比图的医疗广告</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">柳州市鹿寨县市场监管局</div></div></div><div class="st">违法事实</div><div class="ft">当事人在未取得《医疗广告审查证明》的情况下对外发布含有"种植、矫正前后对比图"内容的医疗广告。</div><div class="st">行政处罚</div><div class="pt">依法作出行政处罚</div><div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 广西市场监管局原文 <a href="http://m.toutiao.com/group/7665634771980091910/" target="_blank">↗ 原文链接</a></div><p>鹿寨牙乙乐口腔门诊有限公司在未取得《医疗广告审查证明》的情况下对外发布含有"种植、矫正前后对比图"内容的医疗广告。违反了《广告法》第四十六条之规定。</p></div></div></div></div>
+
+    <!-- G3 --><div class="cc" data-c="食品" data-d="2026-01" data-v="虚假广告" data-k="覃记鑫隆烧烤城 牛肉风味 鸭胸肉 黄牛肉 桂林"><div class="ch"><div class="cn" style="background:#e67e22">G3</div><div class="cta"><div class="ct">桂林市雁山区覃记鑫隆烧烤城违法广告案</div><div class="ctags"><span class="tag tag-food">食品</span><span class="tag tag-cr">虚假广告</span></div></div></div><div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">产品成分虚假标注（鸭胸肉→黄牛肉）</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">桂林市雁山区市场监管局</div></div></div><div class="st">违法事实</div><div class="ft">"牛肉风味手把串"配料表标注为鸭胸肉，售卖时却标注为"黄牛肉"。</div><div class="st">行政处罚</div><div class="pt">依法作出行政处罚</div><div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 广西市场监管局原文 <a href="http://m.toutiao.com/group/7665634771980091910/" target="_blank">↗ 原文链接</a></div><p>违反了《广告法》第四条和第二十八条之规定。</p></div></div></div></div>
+
+    <!-- G4 --><div class="cc" data-c="其他" data-d="2026-01" data-v="虚假促销" data-k="华府家广福商贸 超市 买一送一 藤县"><div class="ch"><div class="cn" style="background:#e67e22">G4</div><div class="cta"><div class="ct">藤县华府家广福商贸有限责任公司违法广告案</div><div class="ctags"><span class="tag tag-oth">虚假促销</span></div></div></div><div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">促销活动未标明有效期限且提前结束未公示</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">梧州市藤县市场监管局</div></div></div><div class="st">违法事实</div><div class="ft">印发含"全场买一送一"广告单，未标明有效期限，活动提前结束未公示。</div><div class="st">行政处罚</div><div class="pt">依法作出行政处罚</div><div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 广西市场监管局原文 <a href="http://m.toutiao.com/group/7665634771980091910/" target="_blank">↗ 原文链接</a></div><p>违反了《广告法》第八条第一款之规定。</p></div></div></div></div>
+
+    <!-- G5 --><div class="cc" data-c="教育培训" data-d="2026-01" data-v="虚假引证" data-k="中公教育 北海 培训 通过率 精准研发 微信公众号"><div class="ch"><div class="cn" style="background:#e67e22">G5</div><div class="cta"><div class="ct">南宁中公未来教育咨询有限公司北海分公司违法广告案</div><div class="ctags"><span class="tag tag-edu">教育培训</span></div></div></div><div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">教育培训广告含保证性承诺</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">北海市海城区市场监管局</div></div></div><div class="st">违法事实</div><div class="ft">在微信公众号发布"通过率超80%""通过率提高20%"等教育培训广告。</div><div class="st">行政处罚</div><div class="pt">依法作出行政处罚</div><div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 广西市场监管局原文 <a href="http://m.toutiao.com/group/7665634771980091910/" target="_blank">↗ 原文链接</a></div><p>违反了《广告法》第二十四条第一项之规定。</p></div></div></div></div>
+
+    <!-- G6 --><div class="cc" data-c="医疗服务" data-d="2026-01" data-v="医疗广告违规" data-k="目明尔来视光 教授 肖像 国家级验光大师 博白"><div class="ch"><div class="cn" style="background:#e67e22">G6</div><div class="cta"><div class="ct">博白县目明尔来视光服务有限公司违法广告案</div><div class="ctags"><span class="tag tag-med">医疗广告</span><span class="tag tag-cr">代言违法</span></div></div></div><div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">医疗广告使用专家身份推荐证明</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">玉林市博白县市场监管局</div></div></div><div class="st">违法事实</div><div class="ft">在微信服务号广告中使用某教授姓名、肖像及"国家级验光大师、大国工匠"等专家身份推荐证明。</div><div class="st">行政处罚</div><div class="pt">依法作出行政处罚</div><div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 广西市场监管局原文 <a href="http://m.toutiao.com/group/7665634771980091910/" target="_blank">↗ 原文链接</a></div><p>违反了《广告法》第十六条第一款第四项之规定。</p></div></div></div></div>
+
+    <!-- G7 --><div class="cc" data-c="食品" data-d="2026-01" data-v="宣称治疗功效" data-k="养乃世家 羊初乳 糖尿病 皮肤病 关节炎 微信社群 直播 私域"><div class="ch"><div class="cn" style="background:#e67e22">G7</div><div class="cta"><div class="ct">养乃世家食品经营部违法广告案</div><div class="ctags"><span class="tag tag-food">普通食品</span><span class="tag tag-hp">私域营销</span></div></div></div><div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">普通食品宣称疾病治疗功效（微信社群+直播）</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">河池市罗城仫佬族自治县市场监管局</div></div></div><div class="st">违法事实</div><div class="ft">通过3个微信营销群对羊初乳宣传，宣称可改善糖尿病、皮肤病、关节炎等病症。</div><div class="st">行政处罚</div><div class="pt">依法作出行政处罚</div><div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 广西市场监管局原文 <a href="http://m.toutiao.com/group/7665634771980091910/" target="_blank">↗ 原文链接</a></div><p>违反了《广告法》第十七条之规定。</p></div></div></div></div>
+
+    <!-- G8 --><div class="cc" data-c="其他" data-d="2026-01" data-v="虚假广告" data-k="黄某 游戏推广 虚假收入 微信收益 德保"><div class="ch"><div class="cn" style="background:#e67e22">G8</div><div class="cta"><div class="ct">黄某制作发布违法广告案（游戏推广）</div><div class="ctags"><span class="tag tag-cr">虚假广告</span><span class="tag tag-oth">网络平台</span></div></div></div><div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">制作虚假收入页面视频广告</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">百色市德保县市场监管局</div></div></div><div class="st">违法事实</div><div class="ft">制作发布"微信收益/提现到账通知"等虚假收入页面素材的视频广告。</div><div class="st">行政处罚</div><div class="pt">依法作出行政处罚</div><div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 广西市场监管局原文 <a href="http://m.toutiao.com/group/7665634771980091910/" target="_blank">↗ 原文链接</a></div><p>违反了《广告法》第四条和第二十八条之规定。</p></div></div></div></div>
+
+    <!-- G9 --><div class="cc" data-c="其他" data-d="2026-01" data-v="虚假广告,虚假促销" data-k="海酩威酿酒 酒类广告 饮酒动作 专利 合山"><div class="ch"><div class="cn" style="background:#e67e22">G9</div><div class="cta"><div class="ct">广西海酩威酿酒股份有限公司违法广告案</div><div class="ctags"><span class="tag tag-oth">酒类广告</span><span class="tag tag-cr">虚假专利</span></div></div></div><div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">酒类广告含饮酒动作 + 虚假宣称专利</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">来宾市合山市市场监管局</div></div></div><div class="st">违法事实</div><div class="ft">在电商平台发布含饮酒动作的酒类广告配图，并虚假宣称"曾获多项专利"。</div><div class="st">行政处罚</div><div class="pt">依法作出行政处罚</div><div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 广西市场监管局原文 <a href="http://m.toutiao.com/group/7665634771980091910/" target="_blank">↗ 原文链接</a></div><p>违反了《广告法》第二十三条"酒类广告不得含有饮酒动作"、第十二条关于专利标识的规定。</p></div></div></div></div>
+  </div>
+
+  <!-- ===== 7月29日 ===== -->
+  <!-- ===== 7月31日 ===== -->
+  <div class="tc active" id="d9">
+    <div class="sc"><h2>📋 7月31日 · 新增案例</h2><p><strong>市场监管总局</strong>公布<strong>六起市场化活动违法违规行为专项整治典型案件</strong>，涵盖虚假榜单有偿排名、虚构论坛合作、展会虚假招商、冒用国际组织标识、虚构国礼资质、培训机构伪造学员名单等违法情形，涉案金额合计超365万元。</p><p><strong>上海市市场监管局</strong>披露<strong>薇诺娜品牌直播违规宣传处罚案</strong>，贝泰妮子公司因直播间宣称"祛痘"未完成功效备案被处罚。</p><p class="srct">来源：<a href="http://m.toutiao.com/group/7668218561202029107/" target="_blank">市场监管总局（环球网）</a> · <a href="http://m.toutiao.com/group/7668212703663522358/" target="_blank">央视新闻</a> · <a href="http://m.toutiao.com/group/7668266709521842697/" target="_blank">闪电新闻</a></p></div>
+    <div id="nr8" class="nr"><div class="ni">🔍</div><div>未找到匹配的案例，请调整筛选条件</div></div>
+
+    <!-- 1 --><div class="cc" data-c="其他" data-d="2026-07" data-v="虚假广告,虚构数据" data-k="格勒博意利 GYBrand 品牌咨询 全球品牌研究院 品牌500强 排行榜 付费排名 虚假榜单 天河区 吊销营业执照 130万">
+      <div class="ch"><div class="cn">1</div><div class="cta"><div class="ct">格勒博意利(广州)品牌咨询有限公司虚假宣传案</div><div class="ctags"><span class="tag tag-oth">品牌咨询</span><span class="tag tag-cr">虚假榜单</span><span class="tag" style="background:#e74c3c">罚130万+吊照</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">虚构"全球品牌研究院"等资质 + 发布113篇虚假榜单收取企业费用</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">广州市天河区市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人自2019年至2026年期间通过官网、微信公众号等渠道宣称自己为"过硬研究员""GYBrand全球品牌研究院""全球首家每年发布中国、亚洲、世界品牌500强、中国出海品牌100强的研究机构"等，但无法提供证据材料证明。此外，对外发布各类排行榜单共计113篇，向合作企业收取服务费用并使其入选虚假排行榜单，榜单缺乏科学性，属于不客观不真实的排行榜单。经查，该公司除负责人外没有正式员工，"研究力量"由负责人家属、朋友及临时招募的在校学生拼凑而成。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款130万元、吊销营业执照（依据《反不正当竞争法》第二十五条第一款）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 市场监管总局原文 <a href="http://m.toutiao.com/group/7668218561202029107/" target="_blank">↗ 原文链接</a></div><p>格勒博意利(广州)品牌咨询有限公司自2019年至2026年期间通过官网、微信公众号等渠道宣称自己为"过硬研究员""GYBrand全球品牌研究院""全球首家每年发布中国、亚洲、世界品牌500强、中国出海品牌100强的研究机构"等，但无法提供证据材料证明上述宣传内容，存在虚假宣传行为。</p><p>此外，当事人对外发布各类排行榜单共计113篇，向合作企业收取服务费用，并使其入选上述虚假排行榜单，榜单缺乏科学性，属于不客观不真实的排行榜单。</p><p>当事人的行为违反了《中华人民共和国反不正当竞争法》第九条第一款、第二款的规定，依据该法第二十五条第一款的规定，责令当事人停止违法行为，处130万元罚款、吊销营业执照。</p></div></div></div></div>
+
+    <!-- 2 --><div class="cc" data-c="其他" data-d="2026-07" data-v="虚假广告,虚构数据" data-k="亚洲星云品牌 Asiabrand 品牌榜 中国创新品牌500强 推广费 国际经济论坛 分论坛 虚构 100万">
+      <div class="ch"><div class="cn">2</div><div class="cta"><div class="ct">亚洲星云品牌管理(北京)有限公司虚假宣传案</div><div class="ctags"><span class="tag tag-oth">品牌咨询</span><span class="tag tag-cr">虚假榜单</span><span class="tag" style="background:#e67e22">罚100万</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">发布含已注销企业的虚假榜单 + 虚构与国际知名经济论坛的关联</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">北京市市场监督管理局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人主营品牌推广、组织会议论坛、发布品牌相关评比榜单等业务，通过其官方微信公众号"Asiabrand品牌榜"发布展示相关榜单。发布的"2022中国创新品牌500强"榜单中包含已注销、已吊销企业两家；向某企业收取推广费9.5万元后发布包含该企业的亚洲十大影响力品牌榜单。此外，当事人利用微信公众号发布文章，宣称自己组织的会议为某国际知名经济论坛的重要分论坛，并使用带有该论坛英文名称字样的图片，上述会议均系当事人单方面擅自虚构，实际与该国际知名经济论坛并无关联。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款100万元（依据《反不正当竞争法》第二十五条第一款）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 市场监管总局原文 <a href="http://m.toutiao.com/group/7668218561202029107/" target="_blank">↗ 原文链接</a></div><p>亚洲星云品牌管理(北京)有限公司主营品牌推广、组织会议论坛、发布品牌相关评比榜单等业务。2022年5月11日发布、展示的"2022中国创新品牌500强"榜单中包含已注销、已吊销企业两家；2024年9月4日向某企业收取推广费9.5万元，同年11月5日发布包含该企业的亚洲十大影响力品牌榜单。</p><p>当事人于2024年12月19日、2026年1月22日利用官方微信公众号发布文章，宣称自己组织的会议为某国际知名经济论坛的重要分论坛，并使用带有该论坛英文名称字样的图片，上述会议均系当事人单方面擅自虚构。</p><p>依据《反不正当竞争法》第二十五条第一款规定，责令停止违法行为，处100万元罚款。</p></div></div></div></div>
+
+    <!-- 3 --><div class="cc" data-c="其他" data-d="2026-07" data-v="虚假广告,虚假促销" data-k="大荣展览 中国东盟 工业博览会 拆分展会 参展商手册 特邀单位 虚假宣传 80万 南宁">
+      <div class="ch"><div class="cn">3</div><div class="cta"><div class="ct">大荣(北京)展览有限公司虚假宣传案</div><div class="ctags"><span class="tag tag-oth">会展服务</span><span class="tag tag-cr">展会虚假宣传</span><span class="tag" style="background:#e67e22">罚80万</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">将综合展会拆分为多个独立展会虚假宣传 + 罗列未经确认的"特邀单位"</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">南宁市青秀区市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人于2025年11月22日至24日与其他会展公司联合承办"2025年中国—东盟国际工业博览会(广西)"，在参展商手册、招展手册等宣传材料中，将展会涉及的制浆造纸、铝工业等7个行业板块拆分为7个独立展会名称进行宣传，与实际备案信息不符。此外，所列"特邀单位"多数处于"拟邀请"阶段，未获得书面授权，且当事人未在后续宣传中予以调整、修改，亦未对参展商进行任何告知、说明。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款80万元（依据《反不正当竞争法》第二十五条第一款）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 市场监管总局原文 <a href="http://m.toutiao.com/group/7668218561202029107/" target="_blank">↗ 原文链接</a></div><p>大荣(北京)展览有限公司于2025年11月与其他会展公司联合承办"2025年中国—东盟国际工业博览会(广西)"，在参展商手册、招展手册等宣传材料中，将展会涉及的7个行业板块拆分为7个独立展会名称进行宣传，与实际备案信息不符。</p><p>依据《反不正当竞争法》第二十五条第一款规定，责令停止违法行为，处80万元罚款。</p></div></div></div></div>
+
+    <!-- 4 --><div class="cc" data-c="其他" data-d="2026-07" data-v="虚假广告" data-k="传世技艺 非物质文化遗产 联合国教科文组织 UNESCO 标识 logo 冒用 世界非遗传承人大会 40万">
+      <div class="ch"><div class="cn">4</div><div class="cta"><div class="ct">北京传世技艺非物质文化遗产保护发展中心虚假宣传案</div><div class="ctags"><span class="tag tag-oth">文化传播</span><span class="tag tag-cr">冒用国际组织</span><span class="tag" style="background:#8e44ad">罚40万</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">未经授权擅自使用"联合国教科文组织"标识进行虚假宣传</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">北京市朝阳区市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人系"世界非遗传承人大会"及相关子活动（均为非官方活动）的组织方。自2023年6月起，当事人在其运营的微信公众号、快手号和抖音号使用其自行设计的"非物质文化遗产公约20周年活动logo"作为头像，logo中包含"联合国教科文组织"标识。此外，自2025年2月至5月，当事人在其官网中使用"联合国教科文组织"标识。经核查，当事人使用上述标识的行为并未获得联合国教科文组织合法授权，存在虚假宣传行为。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款40万元（依据《反不正当竞争法》第二十五条第一款）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 央视新闻原文 <a href="http://m.toutiao.com/group/7668212703663522358/" target="_blank">↗ 原文链接</a></div><p>北京传世技艺非物质文化遗产保护发展中心系"世界非遗传承人大会"及相关子活动（均为非官方活动）的组织方。自2023年6月起，当事人在其运营的微信公众号、快手号和抖音号使用其自行设计的"非物质文化遗产公约20周年活动logo"作为头像，logo中包含"联合国教科文组织"标识。</p><p>经核查，当事人使用上述标识未获得联合国教科文组织合法授权。依据《反不正当竞争法》第二十五条第一款规定，责令停止违法行为，处40万元罚款。</p></div></div></div></div>
+
+    <!-- 5 --><div class="cc" data-c="其他" data-d="2026-07" data-v="虚假广告" data-k="大国大礼 文化交流 国宾礼管理中心 钧瓷杯 驻华大使 国礼 虚构 3990元 10万">
+      <div class="ch"><div class="cn">5</div><div class="cta"><div class="ct">北京大国大礼文化交流中心有限公司虚假宣传案</div><div class="ctags"><span class="tag tag-oth">文创礼品</span><span class="tag tag-cr">虚构国礼</span><span class="tag" style="background:#7f8c8d">罚10万</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">自行创设"中国国宾礼管理中心"名义 + 将民间赠送礼品与"国礼"相关联虚假宣传</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">北京市朝阳区市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人主要从事开发、策划并销售非遗文创礼品，对外宣称为"国宾礼管理中心""中国国宾礼管理中心""世界非遗传承人大会中国国宾礼管理中心"等。当事人在其微信服务号发布文章介绍其产品钧瓷杯，称系赠送给突尼斯共和国等四国驻华大使国宾礼，并配以法人代表与四国驻华大使手持钧瓷杯的合影照片。文章末尾宣传该钧瓷杯为"四国国礼馆藏见证大国荣耀"等并标注官方零售价3990元。经核查，"中国国宾礼管理中心"为当事人自行创设使用的名称，无任何官方授权；该钧瓷杯从未在正式外交场合以国家名义赠送。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款10万元（依据《反不正当竞争法》第二十五条第一款）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 市场监管总局原文 <a href="http://m.toutiao.com/group/7668218561202029107/" target="_blank">↗ 原文链接</a></div><p>北京大国大礼文化交流中心有限公司对外宣称为"国宾礼管理中心""中国国宾礼管理中心"等。在微信服务号发布文章宣传其钧瓷杯为赠送给四国驻华大使的国宾礼，标注零售价3990元。</p><p>经核查，"中国国宾礼管理中心"为当事人自行创设的名称，无任何官方授权；钧瓷杯从未在正式外交场合以国家名义赠送。</p><p>依据《反不正当竞争法》第二十五条第一款规定，责令停止违法行为，处10万元罚款。</p></div></div></div></div>
+
+    <!-- 6 --><div class="cc" data-c="教育培训" data-d="2026-07" data-v="虚假广告,虚构数据" data-k="海南勇创物流 AI工具 高级物流职业经理 培训通过名单 张吉惟 林国瑞 全网最忙五人组 虚假 海口 5万">
+      <div class="ch"><div class="cn">6</div><div class="cta"><div class="ct">海南勇创物流科技有限公司虚假宣传案（AI造假）</div><div class="ctags"><span class="tag" style="background:#3498db">教育培训</span><span class="tag tag-cr">AI造假</span><span class="tag tag-oth">虚构名单</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">使用AI工具生成虚假培训通过名单并对外发布</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">海口市市场监督管理局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人因培训人数急剧缩减，为体现参加公司培训人员通过率高、通过人员多、通过级别高的培训效果，在2025年5月海南第四十八期物流师、物流职业经理认证培训班人员参加全国统考后，采用AI工具生成"高级物流职业经理"培训通过名单，其中包含了"全网最忙五人组——张吉惟、林国瑞、林玟书、林雅南、江奕云"等不实内容，并在微信公众号页面发布，存在虚假宣传行为。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款5万元（依据《反不正当竞争法》第二十五条第一款）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 市场监管总局原文 <a href="http://m.toutiao.com/group/7668218561202029107/" target="_blank">↗ 原文链接</a></div><p>海南勇创物流科技有限公司因培训人数急剧缩减，为体现培训通过率高、通过人员多，采用AI工具生成"高级物流职业经理"培训通过名单，其中包含"全网最忙五人组——张吉惟、林国瑞、林玟书、林雅南、江奕云"等不实内容，并在微信公众号页面发布。</p><p>依据《反不正当竞争法》第二十五条第一款规定，责令停止违法行为，处5万元罚款。</p></div></div></div></div>
+
+    <!-- 7 --><div class="cc" data-c="其他" data-d="2026-07" data-v="虚假广告" data-k="薇诺娜 贝泰妮 上海贝泰妮 特护精华水 祛痘 功效宣称 直播间 虚假宣传 化妆品 1万">
+      <div class="ch"><div class="cn">7</div><div class="cta"><div class="ct">上海贝泰妮生物科技有限公司直播虚假宣传案（薇诺娜）</div><div class="ctags"><span class="tag tag-oth">化妆品</span><span class="tag tag-cr">直播违规</span><span class="tag" style="background:#7f8c8d">功效未备案</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">普通化妆品直播宣称"祛痘"功效但未完成功效宣称备案</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">上海市市场监督管理局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">2026年1月21日，当事人通过自运营的"薇诺娜官方旗舰店"直播销售"薇诺娜特护精华水特护霜套装"时，主播口头宣称"全脸修复改善你的红痒干，还能祛痘、祛痘印，细毛孔能看出28天给你彻底改善不反复"。经查，该套装内包含的舒敏保湿特护精华水、特护霜、蓝铜胜肽修护精华液等多款产品均为普通化妆品，均未完成"祛痘"功效宣称备案。根据《化妆品功效宣称评价规范》，"祛痘"属于独立的化妆品功效宣称评价项目，必须提交人体功效评价试验方可备案。</div>
+      <div class="st">行政处罚</div><div class="pt">责令停止违法行为，罚款1万元（沪市监机处〔2026〕202026000016号）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7668266709521842697/" target="_blank">↗ 原文链接</a></div><p>2026年1月21日，上海贝泰妮生物科技有限公司通过自运营的"薇诺娜官方旗舰店"直播销售产品时，主播口头宣称"全脸修复改善你的红痒干，还能祛痘、祛痘印，细毛孔能看出28天给你彻底改善不反复"。</p><p>经查，该套装内多款产品均为普通化妆品，均未完成"祛痘"功效宣称备案。该行为违反《反不正当竞争法》及《直播电商监督管理办法》相关规定。</p><p>上海市市场监督管理局责令停止违法行为并处以罚款1万元。</p></div></div></div></div>
+
+    <div class="ac"><h3>💰 罚款排行</h3>
+      <div class="cb2"><div class="cl">案例1·格勒博意利</div><div class="ck"><div class="cf2" style="width:100%;background:#e74c3c">130万+吊照</div></div></div>
+      <div class="cb2"><div class="cl">案例2·亚洲星云</div><div class="ck"><div class="cf2" style="width:77%;background:#e67e22">100万</div></div></div>
+      <div class="cb2"><div class="cl">案例3·大荣展览</div><div class="ck"><div class="cf2" style="width:62%;background:#f39c12">80万</div></div></div>
+      <div class="cb2"><div class="cl">案例4·传世技艺</div><div class="ck"><div class="cf2" style="width:31%;background:#8e44ad">40万</div></div></div>
+      <div class="cb2"><div class="cl">案例5·大国大礼</div><div class="ck"><div class="cf2" style="width:8%;background:#2c3e50">10万</div></div></div>
+      <div class="cb2"><div class="cl">案例6·勇创物流</div><div class="ck"><div class="cf2" style="width:4%;background:#16a085">5万</div></div></div>
+      <div class="cb2"><div class="cl">案例7·贝泰妮</div><div class="ck"><div class="cf2" style="width:1%;background:#7f8c8d">1万</div></div></div>
+    </div>
+    <div class="ac"><h3>📌 本日特征</h3><ul class="al">
+      <li><strong>总局专项整治：</strong>市场监管总局聚焦市场化活动中的虚假榜单、有偿排名、展会虚假宣传等乱象，一次性公布6起典型案例，罚款合计365万元。</li>
+      <li><strong>"皮包公司"造假榜单：</strong>格勒博意利公司除负责人外无正式员工，靠付费编制虚假品牌榜单113篇，被吊销营业执照。</li>
+      <li><strong>AI造假首案：</strong>海南勇创物流使用AI工具生成虚假培训通过名单，包含"全网最忙五人组"，暴露AI工具被滥用于虚假宣传的新风险。</li>
+      <li><strong>化妆品直播合规：</strong>薇诺娜品牌两年内至少第三次因宣传违规被罚，直播电商功效宣称备案成为监管重点。</li>
+    </ul></div>
+    <div class="npn"><div><strong>本期看点：</strong>市场监管总局7月30日集中公布<strong>六起市场化活动违法违规典型案例</strong>，覆盖品牌榜单、展会论坛、非遗文创、职业培训四大领域，<strong>合计罚款365万元</strong>，其中格勒博意利案被<strong>吊销营业执照</strong>，为今年广告执法领域最严厉处罚之一。"全网最忙五人组"AI造假案则揭示了AI时代虚假宣传的新形态。</div></div>
+  </div>
+
+  <!-- ===== 7月30日 ===== -->
+  <div class="tc" id="d8">
+    <div class="sc"><h2>📋 7月30日 · 新增案例</h2><p><strong>广州市市场监管局</strong>公布<strong>2026年第一批违法广告典型案例（7起）</strong>，覆盖食品、医疗、教育培训、药品、医疗器械、房地产及化妆品等多个民生领域，处罚金额从4万余元至60万元不等。</p><p><strong>山西省市场监管局</strong>同步发布<strong>2026年上半年典型违法广告案例</strong>，涉及教育培训、食品、房地产等领域。</p><p class="srct">来源：<a href="http://m.toutiao.com/group/7667941069832733203/" target="_blank">广州日报</a> · <a href="http://m.toutiao.com/group/7667841573704122931/" target="_blank">山西晚报</a></p></div>
+    <div id="nr7" class="nr"><div class="ni">🔍</div><div>未找到匹配的案例，请调整筛选条件</div></div>
+
+    <!-- GZ1 --><div class="cc" data-c="食品" data-d="2026-07" data-v="虚假广告,宣称保健功能" data-k="某湖传媒科技 枫籽油 普通食品 伪科普 专家学者 科研单位 记忆力 大脑营养 神经酸 保健功能 海珠区">
+      <div class="ch"><div class="cn">1</div><div class="cta"><div class="ct">广州市某湖传媒科技有限公司发布违法广告案</div><div class="ctags"><span class="tag tag-food">普通食品</span><span class="tag tag-cr">虚假广告</span><span class="tag tag-hp">伪科普</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">普通食品广告明示暗示保健功能 + 利用专家学者、科研单位名义宣传</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">广州市海珠区市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人通过网络发布广告，宣传枫籽油系列两款普通食品。宣传内容包含大量不实数据，利用专家学者名义、科研单位、学术机构进行宣传。广告中发布"你是否发现自己经常健忘、丢三落四，记忆力下降严重？大脑似乎越来越不够用了……这是大脑营养在流失"等内容，明示或暗示产品具有保健功能。当事人无法提供上述广告用语的有效佐证材料。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款5万元（依据《广告法》第四条第一款）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667941069832733203/" target="_blank">↗ 原文链接</a></div><p>广州市市场监管局7月29日公布2026年第一批违法广告典型案例。</p><p>当事人通过网络发布广告，宣传枫籽油系列两款普通食品。宣传内容包含大量不实数据，利用专家学者名义、科研单位、学术机构进行宣传。当事人发布的普通食品广告信息明示或者暗示具有保健功能，违反《中华人民共和国广告法》第四条第一款规定。</p><p>海珠区市场监管局依法责令当事人停止广告违法行为，并处罚款50000元。</p></div></div></div></div>
+
+    <!-- GZ2 --><div class="cc" data-c="医疗服务" data-d="2026-07" data-v="未经审查,功效断言,利用患者推荐证明" data-k="晴某医疗 精准心理 医疗广告审查证明 不存在治不好 不存在遗传 3PT诊疗技术 疗效承诺 患者形象 南沙区 罚款60万">
+      <div class="ch"><div class="cn">2</div><div class="cta"><div class="ct">广州市晴某医疗有限公司发布违法医疗广告案</div><div class="ctags"><span class="tag tag-med">医疗广告</span><span class="tag tag-cr">未经审查</span><span class="tag" style="background:#e74c3c">罚60万</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">未经审查发布医疗广告 + 功效性保证 + 使用患者形象作证明</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">广州市南沙区市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人运营的"某某精准心理"账号发布多篇涉及疾病名称、成功治疗案例、3PT诊疗技术、疗效承诺、咨询联系方式等内容的医疗广告推文，且未能提供《医疗广告审查证明》。广告中含有"不存在治不好""不存在遗传"等功效性保证，使用患者形象作证明等内容。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款60万元（依据《广告法》第十六条、第四十六条）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667941069832733203/" target="_blank">↗ 原文链接</a></div><p>当事人运营的"某某精准心理"账号发布多篇涉及疾病名称、成功治疗案例、3PT诊疗技术、疗效承诺、咨询联系方式等内容的医疗广告推文，且当事人未能提供上述医疗广告推文的《医疗广告审查证明》。</p><p>广告中含有"不存在治不好""不存在遗传"等功效性保证，使用患者形象作证明等内容，违反《中华人民共和国广告法》第十六条、第四十六条规定。</p><p>南沙区市场监管局依法责令当事人停止发布违法医疗广告，并处罚款600000元。</p></div></div></div></div>
+
+    <!-- GZ3 --><div class="cc" data-c="教育培训" data-d="2026-07" data-v="虚假引证,利用受益者推荐证明" data-k="某艺艺术培训 联考状元 广东联考状元 广州美术学院状元 四川美术学院状元 引证内容 受益者名义 黄埔区">
+      <div class="ch"><div class="cn">3</div><div class="cta"><div class="ct">广州市某艺艺术培训有限公司发布违法广告案</div><div class="ctags"><span class="tag" style="background:#3498db">教育培训</span><span class="tag tag-oth">虚假引证</span><span class="tag tag-cr">受益者推荐</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">引证内容不真实不准确 + 利用受益者名义作推荐、证明</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">广州市黄埔区市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在官方网站发布"其中囊括广东省联考状元、河南省联考状元、安徽省联考状元、广州美术学院状元、四川美术学院状元等几十名其他各院校状元"的引证内容，未做到真实、准确并标明出处。同时在"联考大捷战果显赫"中发布培训学员的姓名和成绩，利用受益者的名义作推荐、证明。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款10万元（依据《广告法》第十一条第二款、第二十四条第(三)项）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667941069832733203/" target="_blank">↗ 原文链接</a></div><p>当事人在官方网站发布"其中囊括广东省联考状元、河南省联考状元、安徽省联考状元、广州美术学院状元、四川美术学院状元等几十名其他各院校状元"的引证内容，未做到真实、准确，并标明出处。同时在官方网站"联考大捷战果显赫"中发布了培训学员的姓名和成绩，利用受益者的名义作推荐、证明。</p><p>违反《广告法》第十一条第二款、第二十四条第(三)项规定。黄埔区市场监管局依法责令当事人停止发布违法广告，并处罚款100000元。</p></div></div></div></div>
+
+    <!-- GZ4 --><div class="cc" data-c="药品" data-d="2026-07" data-v="未经审查,功能主治不符" data-k="某药师医药连锁 早泄治疗 药品广告 未经审查 功能主治 说明书 白云区">
+      <div class="ch"><div class="cn">4</div><div class="cta"><div class="ct">广州某药师医药连锁有限公司发布违法广告案</div><div class="ctags"><span class="tag tag-drug">药品</span><span class="tag tag-cr">未经审查</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">未经审查擅自发布药品广告 + 广告内容与药品说明书功能主治不符</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">广州市白云区市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在商品宣传页面上发布带有"早泄治疗"文字内容。经查证，当事人未经广告审查机关审查擅自发布上述文字内容，且该文字内容与药品说明书上的功能主治不符。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款5万元（依据《广告法》第十六条第二款、第四十六条）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667941069832733203/" target="_blank">↗ 原文链接</a></div><p>当事人在商品宣传页面上发布带有"早泄治疗"字样的文字内容。经查证，当事人未经广告审查机关审查擅自发布上述文字内容，且该文字内容与药品说明书上的功能主治不符。</p><p>违反《广告法》第十六条第二款、第四十六条规定。白云区市场监管局依法责令当事人停止广告违法行为，并处罚款50000元。</p></div></div></div></div>
+
+    <!-- GZ5 --><div class="cc" data-c="医疗器械" data-d="2026-07" data-v="未经审查" data-k="某曲网络科技 中频激光综合治疗仪 XY-803 XY-807 二类医疗器械 广告审查 番禺区">
+      <div class="ch"><div class="cn">5</div><div class="cta"><div class="ct">广州某曲网络科技有限公司发布未经审查的医疗器械广告案</div><div class="ctags"><span class="tag tag-med">医疗器械</span><span class="tag tag-cr">未经审查</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">未经审查擅自发布二类医疗器械广告</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">广州市番禺区市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人于2025年6月1日起在某平台旗舰店内"中频激光综合治疗仪XY-803""XY-807"二类医疗器械产品页面发布含有"7路输出，至多7人同时理疗""6大核心优势 缓解多部位酸痛"等内容的广告。上述广告发布前，未取得医疗器械广告审查机关的审查文件。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款41832.72元（依据《广告法》第四十六条）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667941069832733203/" target="_blank">↗ 原文链接</a></div><p>当事人于2025年6月1日开始在某平台旗舰店内"中频激光综合治疗仪XY-803"二类医疗器械产品页面发布广告。在"中频激光综合治疗仪XY-807"二类医疗器械产品页面发布广告。当事人上述广告发布前，未取得医疗器械广告审查机关的审查文件。</p><p>违反《广告法》第四十六条规定。番禺区市场监管局依法责令当事人停止广告违法行为，并处罚款41832.72元。</p></div></div></div></div>
+
+    <!-- GZ6 --><div class="cc" data-c="房地产" data-d="2026-07" data-v="违法使用党旗,虚假内容,违规发布" data-k="方某房地产 党旗元素 招生小区 高铁30分钟 深圳福田 地铁31号线 规划线路 售楼部 南沙区 罚20万">
+      <div class="ch"><div class="cn">6</div><div class="cta"><div class="ct">广州方某房地产有限公司发布违法广告案</div><div class="ctags"><span class="tag tag-re">房地产</span><span class="tag tag-cr">违法使用党旗</span><span class="tag tag-oth">虚假内容</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">违法使用党旗元素 + 虚假交通及规划信息 + 违规标示规划路线站点</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">广州市南沙区市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在账号发布含党旗元素的短视频，在售楼部外摆放写有"2025年小学/初中招生小区仅十里方圆"的宣传立牌，发布含有"高铁30分钟直达深圳福田，50分钟畅达香港西九龙"表述的文章，在大堂KT板中显示"紧邻4号线黄阁站|地铁31号线"等宣传物料，且区域和交通配图中标示31号线、15号线、广深港磁悬浮线等规划中的路线站点等内容。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款201018.77元（依据《广告法》第八条、第九条、第二十六条、第二十八条及《党徽党旗条例》）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667941069832733203/" target="_blank">↗ 原文链接</a></div><p>当事人在账号发布含党旗元素的短视频，在经营场所售楼部外摆放写有"2025年小学/初中招生小区仅十里方圆"的宣传立牌，在账号发布含有"高铁30分钟直达深圳福田，50分钟畅达香港西九龙"表述的文章，在经营场所大堂KT板中显示含"紧邻4号线黄阁站|地铁31号线"的宣传物料，且当中关于区域和交通配图中标示楼盘位置，标示有31号线、15号线、广深港磁悬浮线等规划中的路线站点等内容。</p><p>违反《中国共产党党徽党旗条例》第十三条和《广告法》第九条第(七)项、第八条第一款、第二十六条第(二)项、第二十八条第一款规定。南沙区市场监管局依法处罚款201018.77元。</p></div></div></div></div>
+
+    <!-- GZ7 --><div class="cc" data-c="其他" data-d="2026-07" data-v="虚假广告,虚构数据,刷单" data-k="梦某达电子商务 某研 化妆品 祛痘 数据 虚假 专家教授 刷单 虚构销售量 天河区">
+      <div class="ch"><div class="cn">7</div><div class="cta"><div class="ct">广州梦某达电子商务有限公司发布虚假广告及刷单案</div><div class="ctags"><span class="tag tag-oth">化妆品</span><span class="tag tag-cr">虚假广告</span><span class="tag" style="background:#e67e22">刷单造假</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">虚构功效数据 + 利用专家教授名义宣传 + 刷单虚构销售量</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">广州市天河区市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在"某研"系列产品页面使用"精准拦截油转痘冒痘-81.62%↓""冒出油量-66.05%↓""养成不易长痘肌冒痘-90.3%↓"等表述，所有数据无法提供真实出处且无法验证准确性。同时利用专家教授名义、科学论坛等机构头衔进行宣传，无法提供其身份和头衔的真实出处。此外，当事人分别在2025年11月至12月、2026年1月、2026年3月以刷单形式虚构销售量。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款6万元（依据《广告法》第十一条第二款、第二十八条第一款、第二款第(二)(五)项）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667941069832733203/" target="_blank">↗ 原文链接</a></div><p>当事人在"某研"系列产品页面详情内，使用大量精确数据宣称功效效果，所有数据无法提供真实出处，且无法验证数据的准确性。同时利用专家教授名义、科学论坛等机构头衔内容进行宣传，无法提供其身份和头衔的真实出处。</p><p>此外，当事人分别在2025年11月至12月、2026年1月、2026年3月，以刷单形式虚构销售量，导致其销售状况与实际情况不符。</p><p>天河区市场监管局依法责令当事人停止发布违法广告，并处罚款60000元。</p></div></div></div></div>
+
+    <div class="sc" style="margin-top:16px;border-left-color:#e67e22"><h2>📋 山西省市场监管局 · 2026年上半年典型违法广告案例（部分）</h2><p>山西省市场监管局同步发布2026年上半年查办的典型违法广告案例，涉及教育培训、食品、房地产等领域。</p><p class="srct">来源：<a href="http://m.toutiao.com/group/7667841573704122931/" target="_blank">山西晚报</a></p></div>
+
+    <!-- SX1 --><div class="cc" data-c="教育培训" data-d="2026-07" data-v="虚假广告,效果保证,利用受益者推荐" data-k="太原 教育咨询 微信公众号 命题专家 教研校长 高效2倍 学员喜报 排名佳绩 受益者名义 推荐证明">
+      <div class="ch"><div class="cn" style="background:#e67e22">S1</div><div class="cta"><div class="ct">太原某教育咨询有限公司发布违法教育培训广告案</div><div class="ctags"><span class="tag" style="background:#3498db">教育培训</span><span class="tag tag-cr">效果保证</span><span class="tag tag-oth">受益者推荐</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">对培训效果作出保证性承诺 + 利用受益者名义和形象作推荐证明</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">太原市市场监督管理局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人利用微信公众号发布教育培训广告，含有"教研校长、命题专家带队授课"等信息，以及"每日15小时学习+定向作业拔高，高效2倍"等对教育培训效果作出保证性承诺的内容。同时借助学员高分喜报、排名佳绩等受益者名义和形象作推荐、证明。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款2万元（依据《广告法》）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667841573704122931/" target="_blank">↗ 原文链接</a></div><p>太原某教育咨询有限公司利用微信公众号发布教育培训广告，含有"教研校长、命题专家带队授课"等信息及"每日15小时学习+定向作业拔高，高效2倍"等对培训效果作出保证性承诺的内容，同时借助学员高分喜报、排名佳绩等受益者名义和形象作推荐、证明。</p><p>太原市市场监督管理局责令当事人停止发布违法广告、在相应范围内消除影响，罚款2万元。</p></div></div></div></div>
+
+    <!-- SX2 --><div class="cc" data-c="教育培训" data-d="2026-03" data-v="效果保证" data-k="朔州 文化传媒 微信公众号 民航安检 通过率97% 保证性承诺">
+      <div class="ch"><div class="cn" style="background:#e67e22">S2</div><div class="cta"><div class="ct">朔州市某文化传媒有限公司发布违法教育培训广告案</div><div class="ctags"><span class="tag" style="background:#3498db">教育培训</span><span class="tag tag-cr">效果保证</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">对培训效果作出明示或暗示的保证性承诺</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">朔州市市场监督管理局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人通过公司微信公众号发布广告，内容含有"山西太原民航安检培训普遍通过率在97%以上"等内容，对培训的效果作出明示或者暗示的保证性承诺。</div>
+      <div class="st">行政处罚</div><div class="pt">罚没款3000元（2026年3月）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667841573704122931/" target="_blank">↗ 原文链接</a></div><p>朔州市某文化传媒有限公司通过公司微信公众号发布广告，其内容含有"山西太原民航安检培训普遍通过率在97%以上"等内容，对培训的效果作出明示或者暗示的保证性承诺。</p><p>朔州市市场监督管理局依法责令停止发布违法广告，罚没款3000元。</p></div></div></div></div>
+
+    <!-- SX3 --><div class="cc" data-c="食品" data-d="2026-01" data-v="宣称治疗功效" data-k="忻州 农业科技 核桃 花椒 柿子 普通食品 降低胆固醇 治疗失眠 咳喘 风寒湿痹 五台县">
+      <div class="ch"><div class="cn" style="background:#e67e22">S3</div><div class="cta"><div class="ct">忻州某农业科技有限公司发布违法食品广告案</div><div class="ctags"><span class="tag tag-food">普通食品</span><span class="tag tag-cr">宣称疗效</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">普通食品广告宣称疾病预防、治疗功能及使用医疗用语</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">忻州市五台县市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在营业室展板上发布"核桃、花椒、柿子"等普通食品广告，广告中含有"降低胆固醇、治疗失眠、咳喘、风寒湿痹、痢疾"等涉及疾病预防、治疗等功能或使用医疗用语的内容。</div>
+      <div class="st">行政处罚</div><div class="pt">罚没款5000元（2026年1月）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667841573704122931/" target="_blank">↗ 原文链接</a></div><p>忻州某农业科技有限公司在营业室展板上发布"核桃、花椒、柿子"等普通食品广告，广告中含有"降低胆固醇、治疗失眠、咳喘、风寒湿痹、痢疾"等涉及疾病预防、治疗等功能或使用医疗用语的内容。</p><p>五台县市场监管局依法责令停止发布违法广告，罚没款5000元。</p></div></div></div></div>
+
+    <!-- SX4 --><div class="cc" data-c="房地产" data-d="2026-02" data-v="封建迷信" data-k="长治 园林文化 颐仙园 息风聚财 福泽后代 风水宝地 风水俱佳 封建迷信">
+      <div class="ch"><div class="cn" style="background:#e67e22">S4</div><div class="cta"><div class="ct">长治市某园林文化发展有限公司发布违法房地产广告案</div><div class="ctags"><span class="tag tag-re">房地产</span><span class="tag tag-cr">封建迷信</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">房地产广告含有封建迷信内容（风水宣传）</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">长治市市场监督管理局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在公司网站中发布含有"'颐仙园'是一处十分难得的息风聚财福泽后代的风水宝地""风水俱佳"等内容的宣传语，其表述与封建迷信、未来财富、福运等直接关联，无科学依据，违反广告法有关规定。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款5万元（2026年2月）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667841573704122931/" target="_blank">↗ 原文链接</a></div><p>长治市某园林文化发展有限公司在其公司网站中发布的含有"'颐仙园'是一处十分难得的息风聚财福泽后代的风水宝地""风水俱佳"等内容的宣传语，其表述与封建迷信、未来财富、福运等直接关联，无科学依据，违反了广告法有关规定。</p><p>长治市市场监督管理局依法责令停止发布该违法广告，罚款5万元。</p></div></div></div></div>
+
+    <div class="npn"><div><strong>本期看点：</strong>广州市首批典型案例中，<strong>晴某医疗案罚60万元为本日最高</strong>，心理治疗领域"不存在治不好"的功效保证触目惊心；<strong>方某房地产案罚20万元</strong>，违法使用党旗元素发布广告属新型违法类型。山西省案例中，教培领域"命题专家""通过率97%"等效果保证承诺仍是顽疾；房地产领域"风水宝地"封建迷信宣传再次被查处。</div></div>
+  </div>
+
+  <div class="tc" id="d7">
+    <div class="sc"><h2>📋 7月29日 · 新增案例</h2><p><strong>昆明市互联网信息办公室、昆明市市场监督管理局、昆明市公安局网安支队</strong>联合发布<strong>2026年二季度网络违法违规典型案例</strong>，其中涉及广告违法案例4起，涵盖虚假广告、违法医疗广告、处方药广告违规、虚假化妆品广告等类型。</p><p class="srct">来源：<a href="http://m.toutiao.com/group/7667511232345276928/" target="_blank">昆明信息港</a></p></div>
+    <div id="nr6" class="nr"><div class="ni">🔍</div><div>未找到匹配的案例，请调整筛选条件</div></div>
+
+    <!-- 1 --><div class="cc" data-c="食品" data-d="2026-07" data-v="虚假广告,宣称治疗功效" data-k="云南 供应链 沙棘籽油 凝胶糖果 降血脂 血液检测报告 消费者体验 虚构 杜撰 微信小程序 虚假广告 广告法第二十八条">
+      <div class="ch"><div class="cn">1</div><div class="cta"><div class="ct">云南某供应链有限责任公司虚构使用效果虚假广告案</div><div class="ctags"><span class="tag tag-food">普通食品</span><span class="tag tag-cr">虚假广告</span><span class="tag" style="background:#e74c3c">虚构效果</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">虚构消费者使用效果 + 普通食品宣称"降血脂"功效</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">昆明市市场监督管理局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在微信小程序销售其产品"沙棘籽油凝胶糖果"时，为证明其具有"降血脂"的功效，在销售页面中附有消费者血液检测报告单，并配有消费者使用体验："前段时间体检，检测出血脂和血压有点高，跟沙棘工厂的王总提及此事，他就弄了一瓶沙棘籽油给我，查了一下资料，有点吃惊"等字样。经查，该消费者使用体验为当事人采购的第三方广告公司提供的杜撰内容，非真实消费者使用效果。</div>
+      <div class="st">行政处罚</div><div class="pt">依法作出行政处罚（依据《广告法》第二十八条，构成虚构使用商品或者接受服务效果的虚假广告）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667511232345276928/" target="_blank">↗ 原文链接</a></div><p>云南某供应链有限责任公司在微信小程序销售其产品"沙棘籽油凝胶糖果"时，为了证明其具有"降血脂"的功效，在销售页面中附有消费者血液检测报告单，并配有消费者使用体验等字样。</p><p>经查，该店铺使用的消费者使用体验为其采购的第三方广告公司提供的杜撰内容，非真实消费者使用效果，其行为违反《中华人民共和国广告法》第二十八条之规定，构成虚构使用商品或者接受服务效果的虚假广告，市场监管部门依法对其作出行政处罚。</p></div></div></div></div>
+
+    <!-- 2 --><div class="cc" data-c="医疗服务" data-d="2026-07" data-v="医疗广告违规,利用患者推荐证明,宣称治疗功效" data-k="昆明 中医馆 微信公众号 子宫肌瘤 胃痛 腰突 患者治疗经历 治愈率 有效率 医疗广告管理办法 广告法第十六条 患者名义 形象证明 功效保证">
+      <div class="ch"><div class="cn">2</div><div class="cta"><div class="ct">昆明某中医馆利用患者名义作证明违法医疗广告案</div><div class="ctags"><span class="tag tag-med">医疗广告</span><span class="tag tag-cr">患者推荐</span><span class="tag tag-oth">功效保证</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">利用患者名义和形象作证明 + 发布含有功效、保证等内容的违法广告</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">昆明市市场监督管理局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在其微信公众号发布"子宫肌瘤1年伴经期延长，周主任两幅药方诸症痊愈！""长期空腹胃痛、刺痛、烧心、易上火咽痛……杨健武主任一副药诸症痊愈！""26岁小伙腰突痛不欲生，肖雷医生两招解决问题！"等17篇有患者治疗经历和说明治愈率或者有效率的文章，共计1516次阅读量。经查，当事人发布的内容目的在于通过介绍患者病情、治疗过程和方法以及疗效等内容达到广告效果。</div>
+      <div class="st">行政处罚</div><div class="pt">依法作出行政处罚（依据《医疗广告管理办法》第七条和《广告法》第十六条，构成利用患者名义和形象作证明和发布含有功效、保证等广告的违法行为）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667511232345276928/" target="_blank">↗ 原文链接</a></div><p>昆明某中医馆在其微信公众号发布文章，内容有："子宫肌瘤1年伴经期延长，周主任两幅药方诸症痊愈！""长期空腹胃痛、刺痛、烧心、易上火咽痛……杨健武主任一副药诸症痊愈！""26岁小伙腰突痛不欲生，肖雷医生两招解决问题！"等17篇有患者治疗经历和说明治愈率或者有效率的微信公众号文章，17篇文章共计1516次阅读量。</p><p>经查，当事人发布的内容涉及多篇文章，其目的在于通过介绍患者病情、治疗过程和方法以及疗效等内容达到广告效果。其行为同时违反《医疗广告管理办法》第七条和《中华人民共和国广告法》第十六条之规定，构成利用患者名义和形象作证明和发布含有功效、保证等广告的违法行为，市场监管部门依法对其作出行政处罚。</p></div></div></div></div>
+
+    <!-- 3 --><div class="cc" data-c="药品" data-d="2026-07" data-v="处方药违规,未经审查" data-k="昆明 药品有限责任公司 微信公众号 处方药 酚氨咖敏片 安乃近片 土霉素片 复方醋酸氟轻松酊 血塞通软胶囊 西咪替丁片 促销广告 广告法第十五条">
+      <div class="ch"><div class="cn">3</div><div class="cta"><div class="ct">昆明某药品有限责任公司违法发布处方药广告案</div><div class="ctags"><span class="tag tag-drug">处方药</span><span class="tag tag-cr">处方药违规</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">在微信公众号发布含处方药信息的促销广告</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">昆明市市场监督管理局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在其注册并运营的微信公众号上发布含有处方药信息的促销广告。经查，当事人制作包含"酚氨咖敏片""安乃近片""土霉素片""复方醋酸氟轻松酊""血塞通软胶囊""西咪替丁片"等7款处方药共计24款药品信息的宣传海报，并上传微信公众号，持续时间8天，浏览量67次，转发22次。</div>
+      <div class="st">行政处罚</div><div class="pt">依法作出行政处罚（依据《广告法》第十五条，构成违法发布处方药广告行为）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667511232345276928/" target="_blank">↗ 原文链接</a></div><p>昆明某药品有限责任公司在其注册并运营的微信公众号上发布含有处方药信息的促销广告。经查，当事人制作包含"酚氨咖敏片""安乃近片""土霉素片""复方醋酸氟轻松酊""血塞通软胶囊""西咪替丁片"等7款处方药，共计24款药品信息的宣传海报，并上传微信公众号，持续时间8天，浏览量67次，转发22次。</p><p>其行为违反《中华人民共和国广告法》第十五条之规定，构成违法发布处方药广告行为，市场监管部门依法对其作出行政处罚。</p></div></div></div></div>
+
+    <!-- 4 --><div class="cc" data-c="其他" data-d="2026-07" data-v="虚假广告" data-k="昆明 美容店 淡斑 美白淡斑 中草泥膜 特殊化妆品注册证 虚假广告 广告法第四条 化妆品">
+      <div class="ch"><div class="cn">4</div><div class="cta"><div class="ct">昆明某美容店未取得特殊化妆品注册证发布虚假广告案</div><div class="ctags"><span class="tag tag-oth">化妆品</span><span class="tag tag-cr">虚假广告</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">未取得特殊化妆品注册证却宣称淡斑功效，构成虚假广告</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">昆明市市场监督管理局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在某平台上展示的产品页面大肆宣扬其淡斑服务项目和服务产品的显著效果，却未公示相应的特殊化妆品注册证。经查，当事人在从事美容服务期间，为推销其美容项目，在其平台店铺上发布含"美白淡斑中草泥膜"等内容的宣传广告，经现场核实，其推广的淡斑服务产品未取得特殊化妆品注册证，不具备合法宣称淡斑功效的资质。</div>
+      <div class="st">行政处罚</div><div class="pt">依法作出行政处罚（依据《广告法》第四条，构成虚假广告行为）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667511232345276928/" target="_blank">↗ 原文链接</a></div><p>昆明某美容店在某平台上展示的产品页面大肆宣扬其淡斑服务项目和服务产品的显著效果，却未公示相应的特殊化妆品注册证。经查，当事人在从事美容服务期间，为推销其美容项目，在其平台店铺上发布含"美白淡斑中草泥膜"等内容的宣传广告，经现场核实，其推广的淡斑服务产品未取得特殊化妆品注册证，不具备合法宣称淡斑功效的资质。</p><p>其行为违反《中华人民共和国广告法》第四条之规定，构成虚假广告行为，市场监管部门依法对其作出行政处罚。</p></div></div></div></div>
+
+    <div class="npn"><div><strong>本期看点：</strong>昆明市三部门（网信办、市场监管局、公安网安支队）联合发布的二季度典型案例中，<strong>4起广告违法案件覆盖食品、医疗、药品、化妆品四大品类</strong>。其中，"沙棘籽油凝胶糖果"案揭示了普通食品通过杜撰消费者体验 + 伪造检测报告进行虚假功效宣传的新模式；中医馆案则是典型的"以科普文章形式发布违法医疗广告"，利用微信公众号发布17篇患者治愈案例变相发布医疗广告；处方药广告案则再次提醒药品经营者，处方药严禁在大众媒体发布广告。</div></div>
+  </div>
+
+  <!-- ===== 7月28日 ===== -->
+  <div class="tc" id="d6">
+    <div class="sc"><h2>📋 7月28日 · 新增案例</h2><p><strong>四川省市场监管局</strong>公布一批<strong>虚假违法广告典型案例（4起）</strong>，聚焦医疗广告违法。</p><p><strong>成都市市场监管局</strong>发布<strong>第七批违法典型案例</strong>，含1起涉及广告法的虚假宣传案。</p><p class="srct">来源：<a href="http://m.toutiao.com/group/7667162078154719782/" target="_blank">中国消费者报</a> · <a href="http://m.toutiao.com/group/7667098201845006867/" target="_blank">四川日报</a></p></div>
+    <div id="nr5" class="nr"><div class="ni">🔍</div><div>未找到匹配的案例，请调整筛选条件</div></div>
+
+    <!-- 1 --><div class="cc" data-c="医疗服务" data-d="2026-07" data-v="未经审查,宣称治疗功效" data-k="成都神康癫痫医院 微信公众号 医疗广告 MRI 靶点定制 精准导航 疗效升级 无痛无创 临床治愈 靶向治疗 未经审查">
+      <div class="ch"><div class="cn">1</div><div class="cta"><div class="ct">成都神康癫痫医院有限公司发布未经审查的违法广告案</div><div class="ctags"><span class="tag tag-med">医疗广告</span><span class="tag tag-cr">未经审查</span><span class="tag" style="background:#e74c3c">功效断言</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">未经审查发布医疗广告 + 涉及医疗技术及功效安全性断言保证</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">成都市市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人通过微信公众号发布的医疗广告，未经广告审查机关审查批准，且广告中含有"3分钟内就能完成患者的MRI个性化靶点定制，实现对刺激部位的精确定位和实时导航""精准导航·疗效升级""无痛无创·安全无忧""个体化方案实现癫痫临床治愈可能，效率双跃升，实现精准快速靶向治疗"等涉及医疗技术、表示功效和安全性的断言或保证等内容。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款6万元（依据《广告法》《医疗广告管理办法》）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667162078154719782/" target="_blank">↗ 原文链接</a></div><p>近日，四川省市场监管局公布一批虚假违法典型案例。</p><p>成都神康癫痫医院有限公司通过微信公众号发布的医疗广告，未经广告审查机关审查批准，且广告中含有"3分钟内就能完成患者的MRI个性化靶点定制，实现对刺激部位的精确定位和实时导航让癫痫临床诊断、治疗更高效""精准导航·疗效升级""无痛无创·安全无忧""个体化方案实现癫痫临床治愈可能，效率双跃升，实现精准快速靶向治疗"等涉及医疗技术、表示功效和安全性的断言或保证等内容。</p><p>当事人上述行为违反《广告法》《医疗广告管理办法》有关规定，成都市市场监管局依法对其作出罚款6万元的处罚。</p></div></div></div></div>
+
+    <!-- 2 --><div class="cc" data-c="医疗服务" data-d="2026-07" data-v="医疗广告违规,宣称治疗功效" data-k="吉尼列尔 医疗美容 电商平台 医疗广告审查证明 颈椎病 腰椎病 肩周炎 功效断言 成都高新区">
+      <div class="ch"><div class="cn">2</div><div class="cta"><div class="ct">成都高新区吉尼列尔医疗美容诊所发布与审查核准内容不符的广告案</div><div class="ctags"><span class="tag tag-med">医疗广告</span><span class="tag tag-cr">内容不符</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">医疗广告与审查证明核准内容不符 + 功效断言保证</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">成都高新技术产业开发区市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人利用电商平台商品页面发布的医疗广告，与《医疗广告审查证明》核准的广告内容不符，且含有"缓解、治愈颈椎病、腰椎病、肩周炎"等表示功效的断言或保证。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款5万元（依据《广告法》《医疗广告管理办法》）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667162078154719782/" target="_blank">↗ 原文链接</a></div><p>当事人利用电商平台商品页面发布的医疗广告，与《医疗广告审查证明》核准的广告内容不符，且含有"缓解、治愈颈椎病、腰椎病、肩周炎"等表示功效的断言或保证。</p><p>当事人上述行为违反《广告法》《医疗广告管理办法》有关规定，成都高新技术产业开发区市场监管局依法对其作出罚款5万元的处罚。</p></div></div></div></div>
+
+    <!-- 3 --><div class="cc" data-c="医疗服务" data-d="2026-07" data-v="未经审查,利用患者推荐证明" data-k="威远 和昶启辰 口腔门诊部 医疗广告 患者推荐 证明 经营场所 大厅播放">
+      <div class="ch"><div class="cn">3</div><div class="cta"><div class="ct">威远和昶启辰口腔门诊部有限责任公司违法广告案</div><div class="ctags"><span class="tag tag-med">医疗广告</span><span class="tag tag-cr">未经审查</span><span class="tag tag-oth">患者推荐</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">未经审查发布医疗广告 + 利用患者作推荐、证明</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">威远县市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在其经营场所大厅播放的医疗广告，未经广告审查机关审查批准，且广告中含有利用多名患者作推荐、证明的内容。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款1.2万元（依据《广告法》《医疗广告管理办法》）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="https://m.weibo.cn/detail/5325387820438064" target="_blank">↗ 原文链接</a></div><p>当事人在其经营场所大厅播放的医疗广告，未经广告审查机关审查批准，且广告中含有利用多名患者作推荐、证明的内容，其行为违反广告法、《医疗广告管理办法》有关规定。</p><p>威远县市场监管局依法对其作出罚款1.2万元的处罚。</p></div></div></div></div>
+
+    <!-- 4 --><div class="cc" data-c="其他" data-d="2026-07" data-v="绝对化用语,宣称治疗功效" data-k="攀枝花 健尔康 咨询服务部 艾灸 精油 黄酮 侧柏酮 最高 药用价值 延年益寿 慢性病 亚健康 儿童艾灸 健脾养胃">
+      <div class="ch"><div class="cn">4</div><div class="cta"><div class="ct">攀枝花市东区健尔康咨询服务部宣称普通商品能治病违法广告案</div><div class="ctags"><span class="tag tag-oth">普通商品</span><span class="tag tag-cr">绝对化用语</span><span class="tag tag-hp">宣称疗效</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">使用绝对化用语 + 宣称普通商品和服务具有保健及疾病预防治疗功效</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">攀枝花市东区市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在其经营场所张贴的艾灸广告，含有"是目前精油含量、黄酮含量、侧柏酮含量最高药用价值的艾草""老人艾灸延年益寿，补阳祛湿，宣化寒湿，针对常见慢性病、亚健康等效果显著""儿童艾灸健脾养胃、提高免疫、促进发育"等内容，在广告中使用绝对化用语，且宣称普通商品和服务具有保健和疾病预防的治疗功效。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款1.05万元（依据《广告法》）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667162078154719782/" target="_blank">↗ 原文链接</a></div><p>当事人在其经营场所张贴的艾灸广告，含有"×××是目前精油含量、黄酮含量、侧柏酮含量最高药用价值的艾草""老人艾灸延年益寿，补阳祛湿，宣化寒湿，针对常见慢性病、亚健康等效果显著""儿童艾灸健脾养胃、提高免疫、促进发育"等内容，在广告中使用绝对化用语，且宣称普通商品和服务具有保健和疾病预防的治疗功效。</p><p>当事人上述行为违反《广告法》相关规定，攀枝花市东区市场监管局依法对其作出罚款1.05万元的处罚。</p></div></div></div></div>
+
+    <!-- 5 --><div class="cc" data-c="食品" data-d="2026-07" data-v="虚假广告" data-k="龙泉驿 烧烤炒饭 牛肉 牛排 里脊 鸡肉 仿牛排 掺假 以假充真 网餐平台 虚假宣传 食品安全法">
+      <div class="ch"><div class="cn">5</div><div class="cta"><div class="ct">龙泉驿区某餐馆虚假宣传案（以鸡肉冒充牛肉）</div><div class="ctags"><span class="tag tag-food">食品</span><span class="tag tag-cr">虚假广告</span><span class="tag" style="background:#e74c3c">掺杂掺假</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">网餐平台菜品主料虚假宣传（鸡肉→牛肉、仿牛排、鸡肉→里脊）</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">成都市龙泉驿区市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在网餐平台售卖的"牛肉""牛排"等菜品，宣传主料分别为牛肉、牛排、肥猪肉。经检测，"火焰纯牛肉串"同时检出牛源性成分和鸡源性成分。"牛排"实际为"仿牛排"；"里脊肉"宣传主料为"肥猪肉"，实际为"鸡肉"。生产商在纯牛肉产品中掺入鸡肉且未如实标注，属于掺杂掺假、以假充真。当事人行为涉嫌违反《广告法》第二十八条第一款、第二款第五项（虚假广告）规定。</div>
+      <div class="st">行政处罚</div><div class="pt">立案调查中（生产商涉嫌构成生产伪劣产品罪，已移送公安机关）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7667098201845006867/" target="_blank">↗ 原文链接</a></div><p>2026年5月，根据成都市公安局龙泉驿区分局移送的违法线索，龙泉驿区市场监管局对龙泉驿区的某餐馆（网餐平台店铺名："某烧烤炒饭"）进行执法检查。发现该店在网餐平台售卖的"牛肉""牛排"等菜品，宣传主料分别为牛肉、牛排、肥猪肉。现场查获"火焰纯牛肉串"（外包装标注配料为牛肉）等原料。经检测，"火焰纯牛肉串"同时检出牛源性成分和鸡源性成分。</p><p>"火焰纯牛肉串"生产商在纯牛肉产品中掺入鸡肉且未如实标注，属于掺杂掺假、以假充真，涉嫌违反《食品安全法》第三十四条第六项规定，并涉嫌构成《刑法》第一百四十条规定的生产伪劣产品罪，已移送公安机关。</p><p>当事人在网餐平台售卖的"牛肉"宣传主料为牛肉，但检测出牛源性和鸡源性成分；"牛排"实际为"仿牛排"；"里脊肉"宣传主料为"肥猪肉"，实际为"鸡肉"，涉嫌违反《广告法》第二十八条，已被立案调查。</p></div></div></div></div>
+
+    <div class="npn"><div><strong>本期看点：</strong>四川省市场监管局本批典型案例<strong>聚焦医疗广告领域</strong>，4起案例中有3起涉及医疗机构（癫痫医院、医美诊所、口腔门诊），违法形态涵盖未经审查发布、与审查内容不符、利用患者推荐等典型违法模式。成都市同期公布的典型案例中，网络餐饮"以假充真"虚假宣传案值得关注，生产商已移送公安。</div></div>
+  </div>
+
+  <!-- ===== 7月27日 ===== -->
+  <div class="tc" id="d5">
+    <div class="sc"><h2>📋 7月27日 · 新增案例</h2><p><strong>柳州市市场监管局</strong>发布<strong>网络食品销售虚假宣传专项整治典型案例（2起）</strong>，涉及微信私域虚假宣传及普通食品违规发布广告。</p><p class="srct">来源：<a href="http://m.toutiao.com/group/7666682287785837108/" target="_blank">广西法治日报</a></p></div>
+    <div id="nr4" class="nr"><div class="ni">🔍</div><div>未找到匹配的案例，请调整筛选条件</div></div>
+
+    <!-- 1 -->
+    <div class="cc" data-c="食品" data-d="2026-07" data-v="虚假广告,宣称治疗功效,直播违法" data-k="鹿寨县隆明食品 运动大礼包 消炎镇痛 关节炎 复合益生菌粉 调节肠道菌群 微信群 朋友圈 私域 电子取证">
+      <div class="ch"><div class="cn">1</div><div class="cta"><div class="ct">鹿寨县隆明食品经营部网络虚假宣传及发布虚假广告案</div><div class="ctags"><span class="tag tag-food">普通食品</span><span class="tag tag-cr">虚假广告</span><span class="tag tag-hp">私域营销</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">微信私域宣称疾病治疗功效 + 普通食品宣称保健功能</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">柳州市鹿寨县市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人存在两项违法行为：一是通过会员微信群推广"运动大礼包"（含普通化妆品、工业产品及预包装食品），宣称产品具有"消炎镇痛、改善关节炎、修复关节软骨"等疾病治疗功能；二是通过微信朋友圈发布普通预包装食品"复合益生菌粉（活菌型）"，标注"调节肠道菌群"等保健食品功能范畴表述，误导消费者将普通食品误认为保健食品。</div>
+      <div class="st">行政处罚</div><div class="pt">责令停止违法行为、消除影响，两项违法行为合并罚款2.2万元（依据《反不正当竞争法》《广告法》）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7666682287785837108/" target="_blank">↗ 原文链接</a></div><p>2025年8月14日，鹿寨县市场监管局对鹿寨县隆明食品经营部开展现场检查，并在公安机关全程见证下启动电子取证程序，现场提取当事人工作人员手机微信数据，固定违法宣传证据。</p><p>经查，当事人通过运营的会员微信群推广"运动大礼包"，该礼包内含普通化妆品、普通工业产品及预包装食品，均非药品或医疗器械，当事人却宣称产品具有消炎镇痛、改善关节炎、修复关节软骨等疾病治疗功能。涉案礼包单价198元，群内显示认购52份均未实际交付，现场查获未售产品14盒。</p><p>当事人还通过微信朋友圈发布普通预包装食品"复合益生菌粉（活菌型）"宣传内容，标注属于保健食品功能范畴的"调节肠道菌群"表述。涉案产品货值共计22350元，案发时已销售40盒。</p></div></div></div></div>
+
+    <!-- 2 -->
+    <div class="cc" data-c="食品" data-d="2026-07" data-v="虚假广告,虚假引证" data-k="融安县 覃老武食品 冒用 厂名厂址 食品生产许可证 牛肉干 猪肉干 抖音 淘宝 网店 肉制品">
+      <div class="ch"><div class="cn">2</div><div class="cta"><div class="ct">广西柳州覃老武食品有限责任公司冒用食品生产许可信息经营肉制品案</div><div class="ctags"><span class="tag tag-food">食品</span><span class="tag tag-cr">冒用生产资质</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">产品外包装及标签冒用他人厂名、厂址及食品生产许可证编号</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">柳州市融安县市场监管局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">2025年10月至2026年4月期间，当事人在抖音、淘宝平台开设两家网店，线上销售牛肉干、猪肉干等预包装肉制品，其产品外包装及标签冒用他人厂名、厂址及食品生产许可证编号，以虚假生产资质信息误导消费者，涉案产品货值共计5737元，违法所得1329元。</div>
+      <div class="st">行政处罚</div><div class="pt">没收涉案肉制品、违规包装材料及标签标识，没收违法所得1329元，并处罚款5000元（依据《广西壮族自治区食品安全条例》）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7666682287785837108/" target="_blank">↗ 原文链接</a></div><p>2026年4月，融安县市场监管局根据相关举报线索，联合公安部门对广西柳州覃老武食品有限责任公司开展核查。</p><p>经查，2025年10月至2026年4月期间，当事人在抖音、淘宝平台开设两家网店，线上销售牛肉干、猪肉干等预包装肉制品，其产品外包装及标签冒用他人厂名、厂址及食品生产许可证编号，以虚假生产资质信息误导消费者，涉案产品货值共计5737元，违法所得1329元。</p></div></div></div></div>
+
+    <div class="npn"><div><strong>本期看点：</strong>柳州市本次公布的典型案例聚焦<strong>网络食品私域营销</strong>监管，首次披露"公安见证下电子取证"的标准化执法模式，为基层查办微信社群、朋友圈等私域渠道违法案件提供了可复制的实操路径。</div></div>
+  </div>
+
+
+  <!-- ===== 7月26日 ===== -->
+  <div class="tc" id="d4">
+    <div class="sc"><h2>📋 7月26日 · 暂无新增</h2><p>7月25日未检索到新发布的违法广告典型案例。市场监管总局官网7月25日无新增违法广告相关公告。各地方市场监管局亦未发布新的典型案例通报。</p><p style="margin-top:10px;color:#6b7c93;font-size:13px">📌 当日媒体持续跟进报道市场监管总局7月21日公布的十起民生领域违法广告典型案例（详见7月23日日报）。</p><p class="srct">来源：<a href="https://www.samr.gov.cn/xw/zj/" target="_blank">市场监管总局官网</a></p></div>
+
+    <div style="text-align:center;padding:40px 20px;color:#b0bec5">
+      <div style="font-size:36px;margin-bottom:16px">📭</div>
+      <div style="font-size:16px;font-weight:600;color:#95a5a6">暂无新增案例</div>
+      <div style="font-size:13px;margin-top:8px;color:#b0bec5">7月25日未检索到新发布的违法广告处罚案例</div>
+    </div>
+  </div>
+
+  <!-- ===== 7月25日 ===== -->
+  <div class="tc" id="d3">
+    <div class="sc"><h2>📋 7月25日 · 新增案例</h2><p>7月24日新增<strong>地方市场监管局</strong>执法案例<strong>3起</strong>，涉及<strong>医疗服务</strong>、<strong>食品</strong>及<strong>其他（违背公序良俗）</strong>领域。</p><p class="srct">来源：<a href="http://m.toutiao.com/group/7666044472693735946/" target="_blank">市井生活谈</a> · <a href="https://m.weibo.cn/detail/5324223339823513" target="_blank">趣解商业</a> · <a href="http://m.toutiao.com/group/7665971330528887296/" target="_blank">中国消费者报</a></p></div>
+    <div id="nr3" class="nr"><div class="ni">🔍</div><div>未找到匹配的案例，请调整筛选条件</div></div>
+
+    <!-- 1 -->
+    <div class="cc" data-c="医疗服务" data-d="2026-07" data-v="虚假广告" data-k="宜丰 药店 老中医 中医坐诊 虚假宣传 诊脉 宜市监处罚 陈某某 无资质">
+      <div class="ch"><div class="cn">1</div><div class="cta"><div class="ct">宜丰县某药店虚假广告案（聘请无资质"老中医"坐诊）</div><div class="ctags"><span class="tag tag-cr">虚假广告</span><span class="tag tag-oth">医疗服务</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">聘请无资质人员坐诊 + 发布虚假宣传海报</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">江西省宜丰县市场监督管理局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">涉案药店在未核实对方是否具有《医师资格证书》《医师执业证书》的情况下，邀请"老中医"陈某某到店内坐诊，并对外发布宣传海报，宣称"邀请老中医到门店坐诊一天，免费诊脉检查各种常见疾病"。经查，陈某某并不具备行医资质，海报宣传内容与实际情况严重不符，属于典型的虚假广告。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款3万元（依据《广告法》第五十五条，处罚文号：宜市监处罚〔2026〕78号）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7666044472693735946/" target="_blank">↗ 原文链接</a></div><p>近期，江西省宜丰县市场监督管理局公示了一则行政处罚信息（宜市监处罚〔2026〕78号），当地一家药店因聘请无资质人员开展中医坐诊，并发布相关虚假宣传海报，被该局认定构成发布虚假广告的违法行为，处以3万元罚款。</p><p>值得注意的是，本次广告违法线索是由宜丰县卫生健康委员会在检查中发现，并移送给县市场监督管理局处理的。涉案药店未取得《中医诊所备案证》擅自开展诊疗活动的行为，还将由县卫生健康委员会另行处理。</p></div></div>
+    </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="cc" data-c="食品" data-d="2026-03" data-v="虚假广告" data-k="葵花药业 小葵花健康 专利 益生菌 乳铁活力 涪陵 网店 广告违法 不实广告 重复违法">
+      <div class="ch"><div class="cn">2</div><div class="cta"><div class="ct">葵花药业集团重庆小葵花健康产业发展有限公司发布不实广告案</div><div class="ctags"><span class="tag tag-food">普通食品</span><span class="tag tag-cr">专利虚假宣传</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">广告中专利功效宣传内容与专利实际不符</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">重庆市涪陵区市场监督管理局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人于2022年12月入驻网商平台，以"葵花食品保健官方旗舰店"名义经营。2026年1月与广告服务商签订合作协议投放宣传图文，广告中包含益生菌、乳铁活力、专利菌株功效等内容，但专利功效相关宣传内容与专利实际载明功效不符。该广告发布时长14天后自行删除。这是该公司近期第二次因广告违法受到行政处罚（此前5月已被罚款9225元）。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款0.5万元（依据《广告法》相关规定）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="https://m.weibo.cn/detail/5324223339823513" target="_blank">↗ 原文链接</a></div><p>近日，信用中国披露的行政处罚信息显示，葵花药业集团重庆小葵花健康产业发展有限公司因发布不实广告，被市场监管部门处以5000元罚款。这是该公司近期第二次因广告违法问题受到行政处罚。</p><p>小葵花健康于2022年12月6日入驻网商平台，以"葵花食品保健官方旗舰店"名义开展食品经营。2026年1月10日，公司与广告服务商签订合作协议，广告发布至网店品牌官方店铺首页，发布时长共计14天。执法部门核查认定，该宣传广告中专利功效相关宣传内容与专利实际载明功效不符，构成广告违法行为。</p></div></div>
+    </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="cc" data-c="其他" data-d="2026-07" data-v="违背公序良俗" data-k="罗技 百事得 辱客 侮辱消费者 像狗一样跑过来 降价促销 公序良俗 静安 罚款20万 游戏鼠标">
+      <div class="ch"><div class="cn">3</div><div class="cta"><div class="ct">上海百事得电子有限公司发布辱客广告案（罗技分销商）</div><div class="ctags"><span class="tag tag-oth">其他</span><span class="tag tag-cr">违背公序良俗</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">发布含侮辱消费者人格内容的降价促销视频广告</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">上海市静安区市场监督管理局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人作为罗技（中国）科技有限公司的分销商，运营"罗技G官方旗舰店"。2026年3月25日至26日，在短视频平台发布鼠标推广视频广告，含有"当我一降价，你还不是像狗一样跑过来"等侮辱消费者人格的内容，推广商品为GPW三代8K无线游戏鼠标。市场监管部门认定该广告文案客观上贬低、侮辱了消费者人格，易引发不良联想，违反《广告法》关于不得发布违背公序良俗广告的规定。</div>
+      <div class="st">行政处罚</div><div class="pt">罚款20万元（依据《广告法》，责令停止发布广告、消除影响）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 来源 <a href="http://m.toutiao.com/group/7665971330528887296/" target="_blank">↗ 原文链接</a></div><p>中国消费者报上海讯（记者孟刚）今年3月，某平台"罗技G官方旗舰店"发布一则鼠标推广视频引发争议。江苏省消保委发文指出，品牌营销可以有创意，但绝不能包含恶意，尊重消费者人格尊严、恪守公平诚信原则才是品牌经营的根本。近日，该事件有了新进展。7月15日，涉事方上海百事得电子有限公司被上海市静安区市场监管局处以20万元罚款。</p><p>行政处罚书显示，上海百事得电子有限公司为罗技（中国）科技有限公司的分销商，经授权在某平台设立并运营"罗技G官方旗舰店"。2021年3月起，罗技公司将其账号"罗技"的登录密码及管理权限移交该公司运营团队，全权授权其运营该账号。</p><p>市场监管部门查明，2026年3月25日至26日，该公司作为广告主，在账号"罗技"发布含有"当我一降价，你还不是像狗一样跑过来"等内容的降价促销视频广告。市场监管部门认定，该广告文案客观上贬低、侮辱了消费者人格，易引发不良联想，违反《广告法》关于不得发布违背公序良俗广告的规定。市场监管部门责令其停止发布广告、消除影响，并处罚款20万元。</p></div></div>
+    </div>
+  </div>
+  </div>
+
+  <!-- ===== 7月24日 ===== -->
+  <div class="tc" id="d2">
+    <div class="sc"><h2>📋 7月24日 · 新增案例</h2><p><strong>南宁市市场监管局</strong>发布<strong>2026年第二批网络食品销售虚假宣传专项整治典型案例（2起）</strong>。</p><p class="srct">来源：<a href="http://m.toutiao.com/group/7666001267642221071/" target="_blank">南宁市场监管</a></p></div>
+    <div id="nr2" class="nr"><div class="ni">🔍</div><div>未找到匹配的案例，请调整筛选条件</div></div>
+
+    <!-- 1 --><div class="cc" data-c="保健食品" data-d="2026-07" data-v="未经审查,绝对化用语,宣称治疗功效" data-k="广西 保健品 保健食品广告 绝对化用语 疾病治疗 网络销售 平台经营">
+      <div class="ch"><div class="cn">1</div><div class="cta"><div class="ct">广西某保健品有限公司发布违法广告案</div><div class="ctags"><span class="tag tag-hp">保健食品</span><span class="tag tag-cr">未经审查</span><span class="tag tag-oth">绝对化用语</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">发布未取得批准文件的保健食品广告 + 绝对化用语 + 涉及疾病治疗功能</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">南宁市市场监督管理局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人根据群众举报线索被核查，在某平台经营中存在发布未取得批准文件或与批准文件不一致的保健食品广告、发布使用绝对化用语广告、发布涉及疾病治疗功能的广告等多项违法行为。</div>
+      <div class="st">行政处罚</div><div class="pt">依法作出罚款的行政处罚（依据《广告法》第五十八条）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 南宁市市场监管局原文 <a href="http://m.toutiao.com/group/7666001267642221071/" target="_blank">↗ 原文链接</a></div><p>南宁市市场监督管理局根据群众举报线索，对广西某保健品有限公司组织开展核查。经查，发现该公司在某平台经营中，存在在销售页面发布未取得批准文件或与批准文件不一致的保健食品广告、发布使用绝对化用语广告、发布涉及疾病治疗功能的广告等多项违法行为。南宁市市场监督管理局依据《中华人民共和国广告法》第五十八条第一款第十四项、第五十八条第一款第二项，结合案件具体情节，对当事人依法作出罚款的行政处罚。</p></div></div></div></div>
+
+    <!-- 2 --><div class="cc" data-c="食品" data-d="2026-07" data-v="宣称治疗功效" data-k="南宁 商贸 微信视频号 清理肺毒 消除肺炎 血脂高 护肝 肝脏 普通食品 医疗用语">
+      <div class="ch"><div class="cn">2</div><div class="cta"><div class="ct">南宁市某商贸有限公司使用疾病治疗功能用语广告案</div><div class="ctags"><span class="tag tag-food">普通食品</span><span class="tag tag-cr">视频号违法</span></div></div></div>
+      <div class="cb"><div class="ig"><div class="ii"><div class="il">违法情形</div><div class="iv">普通食品广告使用涉及疾病治疗功能用语</div></div><div class="ii"><div class="il">处罚主体</div><div class="iv">南宁市青秀区市场监督管理局</div></div></div>
+      <div class="st">违法事实</div><div class="ft">当事人在微信视频号中发布的宣传视频中使用"清理肺毒""消除肺炎""解决血脂高"等医疗用语及"护肝益健""高能修护肝脏"等医疗功效暗示的用语，构成使用涉及疾病治疗功能用语发布普通食品广告的行为。</div>
+      <div class="st">行政处罚</div><div class="pt">依法作出罚款的行政处罚（依据《广告法》第五十八条第一款第二项）</div>
+      <div class="ot"><button class="ob" onclick="tO(this)">📜 查看处罚原文</button><div class="oc"><div class="ol">📄 南宁市市场监管局原文 <a href="http://m.toutiao.com/group/7666001267642221071/" target="_blank">↗ 原文链接</a></div><p>南宁市青秀区市场监督管理局根据群众举报线索，对南宁市某商贸有限公司组织开展核查。经查，发现该公司微信视频号中发布的宣传视频中使用"清理肺毒""消除肺炎""解决血脂高"等医疗用语及"护肝益健""高能修护肝脏"等医疗功效暗示的用语，上述行为违反了《中华人民共和国广告法》第十七条构成使用涉及疾病治疗功能用语发布普通食品广告的行为。南宁市青秀区市场监督管理局依据《中华人民共和国广告法》第五十八条第一款第二项的规定，结合案件具体情节，对当事人依法作出罚款的行政处罚。</p></div></div></div></div>
+
+    <div class="sc" style="margin-top:24px"><h2>📋 7月24日 · 深度分析</h2><p>中国质量报发布专题深度报道，对十起典型案例进行系统分析。</p></div>
+    <div class="ac"><h3>📊 违法情形分布</h3>
+      <div class="cb2"><div class="cl">普通食品疗效化</div><div class="ck"><div class="cf2" style="width:50%;background:#27ae60">5起(50%)</div></div></div>
+      <div class="cb2"><div class="cl">保健食品违法</div><div class="ck"><div class="cf2" style="width:20%;background:#16a085">2起(20%)</div></div></div>
+      <div class="cb2"><div class="cl">医疗器械违法</div><div class="ck"><div class="cf2" style="width:20%;background:#2980b9">2起(20%)</div></div></div>
+      <div class="cb2"><div class="cl">药品广告违法</div><div class="ck"><div class="cf2" style="width:20%;background:#8e44ad">2起(20%)</div></div></div>
+      <div class="cb2"><div class="cl">房地产广告</div><div class="ck"><div class="cf2" style="width:10%;background:#e67e22">1起(10%)</div></div></div>
+    </div>
+    <div class="ac"><h3>🔍 核心趋势</h3><ul class="al">
+      <li><strong>直播营销成重灾区：</strong>至少3起涉及直播违法广告，《直播电商监督管理办法》(2026.2.1)已将直播平台纳入监管。</li>
+      <li><strong>私域营销成新型违法渠道：</strong>微信公众号、社群等成为违法广告新阵地。</li>
+      <li><strong>普通食品疗效化最为普遍：</strong>50%案例涉及普通食品宣称保健/治疗功效。</li>
+      <li><strong>行刑衔接力度加大：</strong>案例10移送公安。</li>
+      <li><strong>广告代言人连带追责：</strong>案例1代言人被罚没10.99万元。</li>
+      <li><strong>骗取审查面临严厉制裁：</strong>案例9撤销839件批准文号且3年不受理。</li>
+    </ul></div>
+    <div class="ac"><h3>💰 罚款排行</h3>
+      <div class="cb2"><div class="cl">案例1·多赢记</div><div class="ck"><div class="cf2" style="width:100%;background:#e74c3c">73.9万</div></div></div>
+      <div class="cb2"><div class="cl">案例2·厚物电商</div><div class="ck"><div class="cf2" style="width:72%;background:#e67e22">52.96万</div></div></div>
+      <div class="cb2"><div class="cl">案例3·掘木科技</div><div class="ck"><div class="cf2" style="width:52%;background:#f39c12">38.37万</div></div></div>
+      <div class="cb2"><div class="cl">案例4·众欣医药</div><div class="ck"><div class="cf2" style="width:41%;background:#27ae60">30万</div></div></div>
+      <div class="cb2"><div class="cl">案例5·安达房产</div><div class="ck"><div class="cf2" style="width:37%;background:#2980b9">27.55万</div></div></div>
+      <div class="cb2"><div class="cl">案例6·盈科食品</div><div class="ck"><div class="cf2" style="width:27%;background:#8e44ad">20万</div></div></div>
+      <div class="cb2"><div class="cl">案例7·荟生健康</div><div class="ck"><div class="cf2" style="width:20%;background:#16a085">15万</div></div></div>
+      <div class="cb2"><div class="cl">案例9·正虎堂</div><div class="ck"><div class="cf2" style="width:19%;background:#2c3e50">13.8万</div></div></div>
+      <div class="cb2"><div class="cl">案例8·正大制药</div><div class="ck"><div class="cf2" style="width:17%;background:#7f8c8d">12.9万</div></div></div>
+      <div class="cb2"><div class="cl">案例10·熊某某</div><div class="ck"><div class="cf2" style="width:10%;background:#c0392b">移送公安</div></div></div>
+    </div>
+    <div class="ac"><h3>📜 政策动向</h3><ul class="al">
+      <li><strong>上半年数据：</strong>全国查办广告违法案件20,302件，罚没金额1.05亿元。</li>
+      <li><strong>《直播电商监督管理办法》</strong>（2026.2.1施行）</li>
+      <li><strong>食品直播电商专门规定</strong>（2026.3.20施行）</li>
+      <li><strong>《食品标识监督管理办法》</strong>（2027.3.16施行）</li>
+    </ul></div>
+  </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="ftr"><div class="ctn">
+    <p>数据来源：<a href="https://www.samr.gov.cn/xw/zj/art/2026/art_fa68b35c13f449218736a97ff7f27133.html" target="_blank">市场监管总局官网</a> · <a href="http://m.toutiao.com/group/7665634771980091910/" target="_blank">广西市场监管局</a> · <a href="http://m.toutiao.com/group/7666001267642221071/" target="_blank">南宁市市场监管局</a> · <a href="http://m.toutiao.com/group/7666044472693735946/" target="_blank">宜丰县市场监管局</a> · <a href="http://m.toutiao.com/group/7667162078154719782/" target="_blank">四川省市场监管局（中国消费者报）</a> · <a href="http://m.toutiao.com/group/7667098201845006867/" target="_blank">成都市市场监管局（四川日报）</a> · <a href="http://m.toutiao.com/group/7667511232345276928/" target="_blank">昆明市市场监管局（昆明信息港）</a> · <a href="http://m.toutiao.com/group/7668218561202029107/" target="_blank">市场监管总局（市场化活动典型案例）</a> · <a href="http://m.toutiao.com/group/7668266709521842697/" target="_blank">上海市市场监管局（薇诺娜案）</a> · 央视新闻 · 中国质量报 · <a href="http://m.toutiao.com/group/7665971330528887296/" target="_blank">中国消费者报</a> · 南方都市报</p>
+    <p style="margin-top:3px">报告生成时间：2026年7月31日</p>
+    <div class="brand">广告总编室 出品</div>
+    <div class="brand-sub">专业 · 权威 · 深度</div>
+  </div></div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var cT='d9';
+  var aC=['all'];
+  var aV=['all'];
+  var sT2='';
+
+  function $(id){return document.getElementById(id)}
+  function $$(sel){return document.querySelectorAll(sel)}
+
+  window.sT=function(t,el){
+    cT=t;
+    buildChips();
+    $$('.tc').forEach(function(e){e.classList.remove('active')});
+    $$('.s-tab').forEach(function(e){e.classList.remove('active')});
+    $(t).classList.add('active');
+    if(el)el.classList.add('active');
+    /* update today button */
+    var tabs=$$('#dateTabs .s-tab');
+    var tb=$('todayBtn');
+    if(tabs.length>0){
+      var first=tabs[0].getAttribute('data-tab');
+      if(tb)tb.classList.toggle('on',t===first);
+    }
+    af();
+    /* close sidebar on mobile after tab switch */
+    if(window.innerWidth <= 768) toggleSidebar();
+  };
+
+  window.goToday=function(){
+    var tabs=$$('#dateTabs .s-tab');
+    if(tabs.length>0){
+      var first=tabs[0];
+      var t=first.getAttribute('data-tab');
+      if(first.classList.contains('archived')){
+        first.classList.remove('archived');
+        updateArch();
+      }
+      sT(t,first);
+      first.scrollIntoView({behavior:'smooth',inline:'start',block:'nearest'});
+    }
+  };
+
+  window.toggleArch=function(){
+    var sel=document.getElementById('archSelect');
+    var btn=document.getElementById('archBtn');
+    if(sel.style.display==='block'){
+      sel.style.display='none';
+      btn.classList.remove('open');
+      return;
+    }
+    // populate select with archived tabs
+    var archived=document.querySelectorAll('#dateTabs .s-tab.archived');
+    sel.innerHTML='<option value="">选择日期…</option>';
+    for(var i=0;i<archived.length;i++){
+      var tid=archived[i].getAttribute('data-tab');
+      var label=archived[i].getAttribute('data-label')||tid;
+      var badge=archived[i].querySelector('.tab-badge');
+      var cnt=badge?badge.textContent:'0';
+      var opt=document.createElement('option');
+      opt.value=tid;
+      opt.textContent=label+' ('+cnt+'件)';
+      sel.appendChild(opt);
+    }
+    sel.style.display='block';
+    btn.classList.add('open');
+  };
+
+  window.closeArchDD=function(){
+    var sel=document.getElementById('archSelect');
+    var btn=document.getElementById('archBtn');
+    if(sel)sel.style.display='none';
+    if(btn)btn.classList.remove('open');
+  };
+
+
+
+
+  window.pickArch=function(tid){
+    var tab=document.querySelector('#dateTabs [data-tab="'+tid+'"]');
+    if(!tab)return;
+    tab.classList.remove('archived');
+    updateArch();
+    sT(tid,tab);
+    tab.scrollIntoView({behavior:'smooth',inline:'start',block:'nearest'});
+    closeArchDD();
+  };
+
+  var RECENT_COUNT=3;
+  var DM={"d9":"26年7月31日","d8":"26年7月30日","d7":"26年7月29日","d6":"26年7月28日","d5":"26年7月27日","d4":"26年7月26日","d3":"26年7月25日","d2":"26年7月24日","d1":"26年7月23日"};
+
+  function updateArch(){
+    var tabs=$$('#dateTabs .s-tab');
+    var wrap=$('archWrap');
+    if(!wrap)return;
+    var hasArchived=false;
+    for(var i=0;i<tabs.length;i++){
+      if(i<RECENT_COUNT){
+        tabs[i].classList.remove('archived');
+      }else{
+        tabs[i].classList.add('archived');
+        hasArchived=true;
+      }
+    }
+    wrap.style.display=hasArchived?'':'none';
+    closeArchDD();
+  }
+
+  var si=$('si');
+  var cb=$('cb');
+  var stm=null;
+
+  si.addEventListener('input',function(){
+    clearTimeout(stm);
+    cb.classList.toggle('show',this.value.length>0);
+    var wasGlobal=!!sT2;
+    var nowGlobal=this.value.trim().length>0;
+    stm=setTimeout(function(){
+      sT2=si.value.trim().toLowerCase();
+      /* show/hide global search banner */
+      var banner=$('gsBanner');
+      var gsText=$('gsText');
+      if(sT2){
+        banner.classList.add('show');
+        gsText.textContent='跨日期全局搜索：「'+si.value.trim()+'」';
+      }else{
+        banner.classList.remove('show');
+      }
+      /* rebuild chips if mode changed */
+      if(wasGlobal!==nowGlobal) buildChips();
+      af();
+    },200);
+  });
+
+  window.clearS=function(){
+    si.value='';
+    cb.classList.remove('show');
+    sT2='';
+    $('gsBanner').classList.remove('show');
+    buildChips();
+    af();
+  };
+
+  window.tC=function(el){
+    var v=el.getAttribute('data-c');
+    if(v==='all'){
+      aC=['all'];
+      $$('[data-c]').forEach(function(e){e.classList.remove('active')});
+      el.classList.add('active');
+    }else{
+      var idx=aC.indexOf('all');
+      if(idx>-1)aC.splice(idx,1);
+      $$('[data-c="all"]').forEach(function(e){e.classList.remove('active')});
+      idx=aC.indexOf(v);
+      if(idx>-1){
+        aC.splice(idx,1);
+        el.classList.remove('active');
+      }else{
+        aC.push(v);
+        el.classList.add('active');
+      }
+      if(aC.length===0){
+        aC=['all'];
+        $$('[data-c="all"]').forEach(function(e){e.classList.add('active')});
+      }
+    }
+    af();
+  };
+
+  window.tV=function(el){
+    var v=el.getAttribute('data-v');
+    if(v==='all'){
+      aV=['all'];
+      $$('[data-v]').forEach(function(e){e.classList.remove('active')});
+      el.classList.add('active');
+    }else{
+      var idx=aV.indexOf('all');
+      if(idx>-1)aV.splice(idx,1);
+      $$('[data-v="all"]').forEach(function(e){e.classList.remove('active')});
+      idx=aV.indexOf(v);
+      if(idx>-1){
+        aV.splice(idx,1);
+        el.classList.remove('active');
+      }else{
+        aV.push(v);
+        el.classList.add('active');
+      }
+      if(aV.length===0){
+        aV=['all'];
+        $$('[data-v="all"]').forEach(function(e){e.classList.add('active')});
+      }
+    }
+    af();
+  };
+
+  window.resetF=function(){
+    si.value='';
+    cb.classList.remove('show');
+    sT2='';
+    $('gsBanner').classList.remove('show');
+    buildChips();
+    af();
+  };
+
+  window.tO=function(btn){
+    var content=btn.nextElementSibling;
+    content.classList.toggle('show');
+    btn.classList.toggle('open');
+    btn.textContent=content.classList.contains('show')?'📜 收起处罚原文':'📜 查看处罚原文';
+  };
+
+  window.setReadMode=function(m){
+    document.body.classList.toggle('quick',m==='quick');
+    $('readFull').classList.toggle('active',m==='full');
+    $('readQuick').classList.toggle('active',m==='quick');
+  };
+
+  window.toggleSidebar=function(){
+    var sb=$('sidebar');
+    var ov=$('mobOverlay');
+    sb.classList.toggle('open');
+    ov.classList.toggle('show');
+  };
+
+  var catColorMap={
+    '食品':'cf','药品':'cd','医疗器械':'cm','保健食品':'chp',
+    '医疗服务':'cs','房地产':'cr','教育培训':'ce','其他':'co'
+  };
+  function buildChips(){
+    var cards=sT2?document.querySelectorAll('.tc .cc'):$(cT).querySelectorAll('.cc');
+    var cats=[],vios=[];
+    cards.forEach(function(card){
+      (card.getAttribute('data-c')||'').split(',').forEach(function(c){
+        c=c.trim();if(c&&cats.indexOf(c)===-1)cats.push(c);
+      });
+      (card.getAttribute('data-v')||'').split(',').forEach(function(v){
+        v=v.trim();if(v&&vios.indexOf(v)===-1)vios.push(v);
+      });
+    });
+    cats.sort();vios.sort();
+    var cHtml='<span class="chip active" data-c="all" onclick="tC(this)">\u5168\u90e8</span>';
+    cats.forEach(function(c){
+      if(c==='all')return;
+      var cls=catColorMap[c]||'co';
+      cHtml+='<span class="chip '+cls+'" data-c="'+c+'" onclick="tC(this)">'+c+'</span>';
+    });
+    var cg=document.getElementById('cG');
+    if(cg){cg.innerHTML=cHtml;}
+    var vHtml='<span class="chip vio active" data-v="all" onclick="tV(this)">\u5168\u90e8</span>';
+    vios.forEach(function(v){
+      if(v==='all')return;
+      vHtml+='<span class="chip vio" data-v="'+v+'" onclick="tV(this)">'+v+'</span>';
+    });
+    var vg=document.getElementById('vG');
+    if(vg){vg.innerHTML=vHtml;}
+    aC=['all'];aV=['all'];
+  }
+
+  function af(){
+    var globalMode=!!sT2;
+    var containers=globalMode?document.querySelectorAll('.tc'):[$(cT)];
+    var vc=0;
+    /* remove existing date badges */
+    document.querySelectorAll('.date-badge').forEach(function(b){b.remove()});
+    /* manage date container visibility */
+    document.querySelectorAll('.tc').forEach(function(c){
+      if(globalMode){
+        c.style.display='';
+      }else{
+        c.style.display=(c.id===cT)?'':'none';
+      }
+    });
+
+    containers.forEach(function(con){
+      if(!con)return;
+      var cards=con.querySelectorAll('.cc');
+      var dateLabel='';
+      if(globalMode){
+        var tab=document.querySelector('.s-tab[data-tab="'+con.id+'"]');
+        dateLabel=tab?(DM[tab.getAttribute('data-tab')]||con.id):con.id;
+      }
+      cards.forEach(function(card){
+        var s=true;
+        /* category filter */
+        if(aC.indexOf('all')===-1){
+          var cc=(card.getAttribute('data-c')||'').split(',');
+          var match=false;
+          for(var i=0;i<cc.length;i++){if(aC.indexOf(cc[i].trim())>-1){match=true;break}}
+          if(!match)s=false;
+        }
+        /* violation filter (only in non-global mode) */
+        if(s&&!globalMode&&aV.indexOf('all')===-1){
+          var vv=(card.getAttribute('data-v')||'').split(',');
+          var match2=false;
+          for(var j=0;j<vv.length;j++){if(aV.indexOf(vv[j].trim())>-1){match2=true;break}}
+          if(!match2)s=false;
+        }
+        /* keyword search */
+        if(s&&sT2){
+          var ct=(card.querySelector('.ct')||{}).textContent||'';
+          var kw=card.getAttribute('data-k')||'';
+          var ft=(card.querySelector('.ft')||{}).textContent||'';
+          var pt=(card.querySelector('.pt')||{}).textContent||'';
+          var ivs=card.querySelectorAll('.iv');
+          var iv='';
+          for(var k=0;k<ivs.length;k++) iv+=ivs[k].textContent+' ';
+          var oc=(card.querySelector('.oc')||{}).textContent||'';
+          var all=(ct+' '+kw+' '+ft+' '+pt+' '+iv+' '+oc).toLowerCase();
+          if(all.indexOf(sT2)===-1)s=false;
+        }
+        if(s){
+          card.classList.remove('hidden');
+          vc++;
+          /* add date badge in global mode */
+          if(globalMode&&!card.querySelector('.date-badge')){
+            var badge=document.createElement('span');
+            badge.className='date-badge';
+            badge.textContent=dateLabel;
+            var ctEl=card.querySelector('.ct');
+            if(ctEl)ctEl.appendChild(badge);
+          }
+        }else{
+          card.classList.add('hidden');
+        }
+      });
+    });
+
+    /* update count */
+    $('fres2').innerHTML='共 \u003cstrong>'+vc+'\u003c/strong> 条';
+
+    /* handle global search empty state */
+    if(globalMode&&vc===0){
+      $('gsText').textContent='跨日期全局搜索：「'+si.value.trim()+'」— 未找到匹配案例';
+    }
+
+    /* handle per-date empty states */
+    $$('.tc').forEach(function(tc){
+      var id=tc.id;
+      var nr=$('nr'+id.replace('d',''));
+      if(!nr)return;
+      if(!globalMode){
+        var vis=tc.querySelectorAll('.cc:not(.hidden)').length;
+        nr.classList.toggle('show',vis===0&&cT===id);
+      }else{
+        nr.classList.remove('show');
+      }
+    });
+  }
+
+  window.exportDay=function(){
+    var activeTab=document.querySelector('.s-tab[data-tab="'+cT+'"]');
+    var day=activeTab?(DM[cT]||cT):cT;
+    var win=window.open('','_blank');
+    if(!win){alert('请允许弹出窗口以导出PDF');return}
+    var content=$(cT).innerHTML;
+    var styles='';
+    var styleEls=document.querySelectorAll('style');
+    for(var i=0; i < styleEls.length; i++) styles+=styleEls[i].outerHTML;
+    var html='\u003c!DOCTYPE html>\u003chtml>\u003chead>\u003cmeta charset="UTF-8">\u003ctitle>'+day+' 违法广告典型案例曝光\u003c/title>'+styles+'\u003c/head>\u003cbody style="background:#fff">\u003cdiv style="max-width:900px;margin:0 auto;padding:20px">\u003ch1 style="text-align:center;color:#1a3a5c;margin-bottom:6px">⚠️ 违法广告典型案例曝光 · '+day+'\u003c/h1>\u003cp style="text-align:center;color:#6b7c93;font-size:13px;margin-bottom:20px">广告总编室 出品\u003c/p>'+content+'\u003c/div>\u003c/body>\u003c/html>';
+    win.document.open();
+    win.document.write(html);
+    win.document.close();
+    setTimeout(function(){try{win.print()}catch(e){}},600);
+  };
+
+  updateArch();
+  buildChips();
+  af();
+  var _ie=document.querySelector('.s-tab[data-tab="'+cT+'"]');if(_ie)sT(cT,_ie);
+
+  /* close archive dropdown when clicking outside */
+  document.addEventListener('click',function(e){
+    var wrap=$('archWrap');
+    if(wrap&&!wrap.contains(e.target)) closeArchDD();
+  });
+})();
+</script>
+</body>
+</html>
